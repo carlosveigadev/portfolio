@@ -4,3 +4,42 @@
   background-size:  1000px 100%;
   background-position: center top;
 }
+
+.border-bottom {
+  margin: 0 auto;
+  width: 20%;
+  position: relative;
+}
+.border-bottom:after {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background: #48bb78;
+  height:10px;
+  border-radius:10px 10px 10px 10px;
+}
+
+.image-placeholder {
+  background: #EBF0EE;
+  border: 1px solid #D0D9D4;
+  border-radius: 8px;
+  max-width: 369px;
+  height: 474px;
+}
+
+.info {
+  align-items: flex-start;
+  padding: 16px 0px 0px 16px;
+  height: 222px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  width: 100%;
+  color: #3A4A42;
+}
+
+.button-gray {
+  background-color: #EBF0EE;
+  display: inline-block;
+}
