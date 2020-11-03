@@ -3,8 +3,8 @@
   opacity: 100;
 }
 .carousel-item {
-  -webkit-transition: opacity 0.01s linear;
-  transition: opacity 0.01s linear;
+  -webkit-transition: opacity 0.001s linear;
+  transition: opacity 0.001s linear;
 }
 #carousel-1:checked ~ .control-1,
 #carousel-2:checked ~ .control-2,
