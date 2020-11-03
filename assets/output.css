@@ -21638,6 +21638,10 @@ video {
           animation: bounce 1s infinite;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -105589,4 +105593,5 @@ video {
             animation: bounce 1s infinite;
   }
 }
+
 
