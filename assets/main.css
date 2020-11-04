@@ -10,6 +10,7 @@
   width: 20%;
   position: relative;
 }
+
 .border-bottom:after {
   content:'';
   position:absolute;
@@ -25,7 +26,7 @@
   background: #EBF0EE;
   border: 1px solid #D0D9D4;
   border-radius: 8px;
-  max-width: 369px;
+  max-width: 340px;
   height: 474px;
 }
 
@@ -42,4 +43,10 @@
 .button-gray {
   background-color: #EBF0EE;
   display: inline-block;
+}
+
+.about-bg {
+  background-image: url(images/illustration_aboutme.png);
+  background-repeat: no-repeat;
+  background-position: center top;
 }
