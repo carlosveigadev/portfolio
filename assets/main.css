@@ -30,6 +30,23 @@
   height: 474px;
 }
 
+.image-placeholder-2 {
+  background: #EBF0EE;
+  border: 1px solid #D0D9D4;
+  border-radius: 8px;
+  max-width: 340px;
+  height: 350px
+}
+
+.image-placeholder-2 ul li {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  background-color:#FFFFFF;
+  color: #48bb78;
+  padding: 12px 12px 12px 12px;
+  margin: 5px 0;
+}
+
 .info {
   align-items: flex-start;
   padding: 16px 0px 0px 16px;
