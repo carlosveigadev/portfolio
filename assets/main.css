@@ -67,3 +67,16 @@
   background-repeat: no-repeat;
   background-position: center top;
 }
+
+.form input {
+  margin: 10px 0;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #D0D9D4;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
+
+.form input:nth-child(3) {
+  height: 115px;
+}
