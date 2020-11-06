@@ -45,9 +45,10 @@
     <div class="carousel-inner relative overflow-hidden w-full">
       <!--Slide 1-->
       <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-      <div class="carousel-item absolute opacity-0 image-placeholder my-10 m-auto flex">
+      <div class="carousel-item absolute opacity-0 image-placeholder image-1 my-10 m-auto flex flex-col">
+        <img src="assets/images/palibot_sample.png" alt="Palibot Blog Image">
         <div class="block text-center info mt-auto justify-end">
-          <h2 class='text-xl'>paliBOT - A travelling articles blog.</h2>
+          <h2 class='text-xl text-blue-900 font-bold'>paliBOT - A travelling articles blog.</h2>
           <ul>
             <li class='p-3 font-bold rounded button-gray my-2'>Ruby on Rails</li>
           </ul>
@@ -59,14 +60,15 @@
       
       <!--Slide 2-->
       <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-      <div class="carousel-item absolute opacity-0 image-placeholder my-10 m-auto flex">
+      <div class="carousel-item absolute opacity-0 image-placeholder my-10 m-auto flex flex-col">
+        <img src="assets/images/app_screenshot.png" alt="[gatherings blog image]">
         <div class="block text-center info mt-auto justify-end">
-          <h2 class='text-xl'>[gatherings] -  Where people can meet in real life.</h2>
+          <h2 class='text-xl text-blue-900 font-bold'>[gatherings] -  Where people can meet in real life.</h2>
           <ul>
             <li class='p-3 font-bold rounded button-gray m-1'>HTML</li>
             <li class='p-3 font-bold rounded button-gray m-1'>CSS</li>
           </ul>
-          <button class='bg-green-500 text-white p-3 font-bold rounded mt-5'>See Project</button>
+          <button onclick="document.getElementById('project02').style.display='block'" class='bg-green-500 text-white p-3 font-bold rounded mt-5'>See Project</button>
         </div>
       </div>
       <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-green-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
@@ -74,13 +76,14 @@
       
       <!--Slide 3-->
       <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-      <div class="carousel-item absolute opacity-0 image-placeholder my-10 m-auto flex">
+      <div class="carousel-item absolute opacity-0 image-placeholder my-10 m-auto flex flex-col">
+        <img src="assets/images/office_workout.png" alt="office workout image">
         <div class="block text-center info mt-auto justify-end">
-          <h2 class='text-xl'>10 Minutes Office Workout for Slack.</h2>
+          <h2 class='text-xl text-blue-900 font-bold'>10 Minutes Office Workout for Slack.</h2>
           <ul>
             <li class='p-3 font-bold rounded button-gray my-2'>Ruby</li>
           </ul>
-          <button class='bg-green-500 text-white p-3 font-bold rounded mt-5'>See Project</button>
+          <button onclick="document.getElementById('project03').style.display='block'" class='bg-green-500 text-white p-3 font-bold rounded mt-5'>See Project</button>
         </div>
       </div>
       <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-green-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
@@ -103,7 +106,7 @@
   <div id='project01' class='project_modal z-20'>
     <div class='modal-content'>
       <div onclick="document.getElementById('project01').style.display='none'"
-      class="inline-block mr-2 absolute right-0 px-4 font-extrabold">x</div>
+      class="inline-block mr-2 absolute right-0 px-5 font-extrabold cursor-pointer">x</div>
       <img src="assets/images/palibot_sample.png" class='m-auto' alt="Palibot Image Sample">
       <h2 class="text-2xl mx-4 font-bold text-blue-900">paliBOT - A travelling articles blog.</h2>
       <ul class='p-3'>
@@ -115,7 +118,43 @@
         <button class='bg-green-500 text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></button>
       </div>
     </div>
-    
+  </div>
+  <div id='project02' class='project_modal z-20'>
+    <div class='modal-content'>
+      <div onclick="document.getElementById('project02').style.display='none'"
+      class="inline-block mr-2 absolute right-0 px-5 font-extrabold cursor-pointer">x</div>
+      <img src="assets/images/app_screenshot.png" class='m-auto' alt="[gatherings] Image Sample">
+      <h2 class="text-2xl mx-4 font-bold text-blue-900">[gatherings]- Where people can meet in real life.</h2>
+      <ul class='p-3'>
+        <li class='p-3 font-bold rounded button-gray my-2'>HTML</li>
+        <li class='p-3 font-bold rounded button-gray my-2'>CSS</li>
+      </ul>
+      <p class="mx-4 font-normal text-blue-900">This is a solo projects at the end of the of the Microverse Main Technical Curriculum of the HTML and CSS section. It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The main objective was to reproduce the design of The Directory of Schools Webpage inspired by Mathew Njuguna and others on behance, with a different theme. I choose to create a website named [gatherings] where people can meet in real life (after the COVID-19 situation) creating and sharing events across the region desired.</p>
+      <div class="m-5 text-center">
+        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Live<i class="far fa-folder-open px-2"></i></button>
+        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></button>
+      </div>
+    </div>
+  </div>
+  <div id='project03' class='project_modal z-20'>
+    <div class='modal-content'>
+      <div onclick="document.getElementById('project03').style.display='none'"
+      class="inline-block mr-2 absolute right-0 px-5 font-extrabold cursor-pointer">x</div>
+      <img src="assets/images/office_workout.png" class='m-auto' alt="[gatherings] Image Sample">
+      <h2 class="text-2xl mx-4 font-bold text-blue-900">10 Minutes Office Workout for Slack.</h2>
+      <ul class='p-3'>
+        <li class='p-3 font-bold rounded button-gray my-2'>Ruby</li>
+      </ul>
+      <p class="mx-4 font-normal text-blue-900">This bot is part of the Capstone projects which are solo projects at the end of the each of the Microverse Main Technical Curriculum sections. This project intend to test the student skills providing challenges that:
+
+        Feels like a real-world-like project, built with business specifications; and
+        Get feedback about the achievement of technical and soft skills gained during the ruby section of the program.
+        Basically, this bot returns a random link video to a YouTube workout where people who works at home or offices can use to stretching.</p>
+      <div class="m-5 text-center">
+        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Live<i class="far fa-folder-open px-2"></i></button>
+        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></button>
+      </div>
+    </div>
   </div>
   <div class="text-center mt-auto pt-20 about-bg">
     <div class='text-center text-4xl mx-10 font-extrabold text-blue-900'>  
@@ -139,7 +178,7 @@
   <div class=" my-10 m-auto image-placeholder-2">
     <div class="flex-col place-items-center">
       <img src="assets/images/icon-frameworks.svg" alt="Languages Icon" class="mx-auto mt-5">
-      <h2 class="text-center mb-10 text-blue-900 text-2xl ">Frameworks</h2>
+      <h2 class="text-center mb-5 text-blue-900 text-2xl ">Frameworks</h2>
       <ul class="flex flex-wrap justify-around">
         <li><a href="">Bootstrap</a></li>
         <li><a href="">Tailwind</a></li>
@@ -153,7 +192,7 @@
   <div class=" my-10 m-auto image-placeholder-2">
     <div class="flex-col place-items-center">
       <img src="assets/images/icon-languages.svg" alt="Languages Icon" class="mx-auto mt-5">
-      <h2 class="text-center mb-10 text-blue-900 text-2xl ">Skills</h2>
+      <h2 class="text-center mb-5 text-blue-900 text-2xl ">Skills</h2>
       <ul class="flex flex-wrap justify-between mx-2 my-auto">
         <li><a href="">Git</a></li>
         <li><a href="">Remote Work</a></li>

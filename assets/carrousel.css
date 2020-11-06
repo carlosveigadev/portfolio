@@ -5,6 +5,7 @@
 .carousel-item {
   -webkit-transition: opacity 0.001s linear;
   transition: opacity 0.001s linear;
+  z-index: -1;
 }
 #carousel-1:checked ~ .control-1,
 #carousel-2:checked ~ .control-2,

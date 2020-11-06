@@ -26,8 +26,14 @@
   background: #EBF0EE;
   border: 1px solid #D0D9D4;
   border-radius: 8px;
-  max-width: 340px;
-  height: 474px;
+  max-width: 840px;
+}
+
+.image-placeholder img {
+  width: 640px;
+  height: 450px;
+  margin: 0 auto;
+  padding: 1em;
 }
 
 .image-placeholder-2 {
@@ -43,13 +49,13 @@
   border-radius: 8px;
   background-color:#FFFFFF;
   color: #48bb78;
-  padding: 12px 12px 12px 12px;
+  padding: 1em;
   margin: 5px 0;
 }
 
 .info {
   align-items: flex-start;
-  padding: 16px 0px 0px 16px;
+  padding: 16px 16px 16px 16px;
   height: 222px;
   background: #FFFFFF;
   border-radius: 8px;
@@ -85,7 +91,6 @@
 .project_modal {
   display: none;
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
   padding: 1em;
@@ -101,6 +106,7 @@
   border-radius: 16px;
   background-color: #fefefe;
   border: 1px solid #888;
+  height: 100%;
 }
 
 .modal-content img {
@@ -122,4 +128,17 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (max-width: 450px){
+  .image-placeholder {
+    max-width: 340px;
+  }
+
+  .image-placeholder img {
+    height: 270px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  
 }
