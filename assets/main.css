@@ -1,7 +1,7 @@
 .main-bg {
   background-image: url(images/Header-llustration-desktop.png);
   background-repeat: no-repeat;
-  background-size:  1000px 100%;
+  background-size: 1000px 100%;
   background-position: center top;
 }
 
@@ -15,20 +15,20 @@ nav div ul li {
   position: relative;
 }
 
-.border-bottom:after {
-  content:'';
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
+.border-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: #48bb78;
-  height:10px;
-  border-radius:10px 10px 10px 10px;
+  height: 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .image-placeholder {
-  background: #EBF0EE;
-  border: 1px solid #D0D9D4;
+  background: #ebf0ee;
+  border: 1px solid #d0d9d4;
   border-radius: 8px;
   max-width: 840px;
 }
@@ -41,17 +41,17 @@ nav div ul li {
 }
 
 .image-placeholder-2 {
-  background: #EBF0EE;
-  border: 1px solid #D0D9D4;
+  background: #ebf0ee;
+  border: 1px solid #d0d9d4;
   border-radius: 8px;
   max-width: 340px;
-  height: 350px
+  height: 350px;
 }
 
 .image-placeholder-2 ul li {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   border-radius: 8px;
-  background-color:#FFFFFF;
+  background-color: #fff;
   color: #48bb78;
   padding: 0.8em;
   margin: 5px 4px;
@@ -61,14 +61,14 @@ nav div ul li {
   align-items: flex-start;
   padding: 16px 16px 16px 16px;
   height: 222px;
-  background: #FFFFFF;
+  background: #fff;
   border-radius: 8px;
   width: 100%;
-  color: #3A4A42;
+  color: #3a4a42;
 }
 
 .button-gray {
-  background-color: #EBF0EE;
+  background-color: #ebf0ee;
   display: inline-block;
 }
 
@@ -82,7 +82,7 @@ nav div ul li {
   margin: 10px 0;
   height: 50px;
   border-radius: 8px;
-  border: 1px solid #D0D9D4;
+  border: 1px solid #d0d9d4;
   box-sizing: border-box;
   text-indent: 10px;
 }
@@ -101,8 +101,8 @@ nav div ul li {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -135,7 +135,7 @@ nav div ul li {
   cursor: pointer;
 }
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
   .image-placeholder {
     max-width: 340px;
   }
@@ -144,11 +144,10 @@ nav div ul li {
     height: 270px;
     margin: 0 auto;
     padding: 1em;
-  }  
+  }
 }
 
 @media (min-width: 450px) {
-
   .main-bg {
     background-image: url(images/Header-llustration-desktop.png);
     background-repeat: no-repeat;
@@ -161,13 +160,13 @@ nav div ul li {
   }
 
   .about-bg {
-    background-image: url(images/illustration_about_me_desktop.png) ;    
+    background-image: url(images/illustration_about_me_desktop.png);
     background-repeat: no-repeat;
     background-position: center top;
   }
 
   .contact-bg {
-    background-image: url(/images/illustration-about-me-2-desktop.png) ;    
+    background-image: url(/images/illustration-about-me-2-desktop.png);
     background-repeat: no-repeat;
     background-position: center top;
   }
@@ -175,7 +174,6 @@ nav div ul li {
   .form input {
     width: 80%;
     margin: 5px auto;
-
   }
 
   .modal-content {
