@@ -1,6 +1,8 @@
-<! DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
  <head>
+  <meta charset="UTF-8">
+  <title>Welcome to my Portfolio</title>
   <link href="assets/main.css" type="text/css" rel="stylesheet" />
   <link href="assets/output.css" type="text/css" rel="stylesheet" />
   <link href="assets/carrousel.css" type="text/css" rel="stylesheet" />
@@ -23,19 +25,19 @@
     </div>
    </nav>
    <div class="main-bg py-10 body-div">
-    <h2 class='text-center text-4xl m-5 font-bold text-blue-900'>  
+    <div class='text-center text-4xl m-5 font-bold text-blue-900'>  
       <span>Hello there, I am Carlos Veiga.</span><br>
       <span class="text-green-500">I am a full stack webdeveloper.</span><br>
-      <div class="text-2xl my-10">I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.</div>
-      <span>
-        <ul class="text-2xl py-24">
+      <h2 class="text-2xl my-10">I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.</h2>
+      <div>
+        <div class="text-2xl py-24">
           <a href='https://twitter.com/carlosveigadev'><i class="fab fa-twitter px-2"></i></a>
           <a href='https://www.linkedin.com/in/chveiga/'><i class="fab fa-linkedin-in px-2"></i></a>
           <a href='https://github.com/wrakc'><i class="fab fa-github px-2"></i></a>
           <a href='https://angel.co/u/chveiga'><i class="fab fa-angellist px-2"></i></a>
-        </ul>
-      </span>
-    </h2>
+        </div>
+      </div>
+    </div>
    </div>
    <div>
     <h2 id='portfolio' class='text-center text-4xl m-5 px-12 font-bold text-blue-900'>My Recent Works</h2>
@@ -43,8 +45,7 @@
   </div>
   <div class="carousel relative bg-white">
     <div class="carousel-inner relative overflow-hidden w-full">
-      <!--Slide 1-->
-      <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+      <input class="carousel-open" type="radio" id="carousel-1" name="carousel" hidden="" checked="checked">
       <div class="carousel-item absolute opacity-0 image-placeholder image-1 my-10 m-auto flex flex-col">
         <img src="assets/images/palibot_sample.png" alt="Palibot Blog Image">
         <div class="block text-center info mt-auto justify-end">
@@ -57,9 +58,7 @@
       </div>
       <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-green-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
       <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-green-500  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-      
-      <!--Slide 2-->
-      <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+      <input class="carousel-open" type="radio" id="carousel-2" name="carousel" hidden="">
       <div class="carousel-item absolute opacity-0 image-placeholder my-10 m-auto flex flex-col">
         <img src="assets/images/app_screenshot.png" alt="[gatherings blog image]">
         <div class="block text-center info mt-auto justify-end">
@@ -73,9 +72,7 @@
       </div>
       <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-green-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
       <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-green-500 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
-      
-      <!--Slide 3-->
-      <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+      <input class="carousel-open" type="radio" id="carousel-3" name="carousel" hidden="">
       <div class="carousel-item absolute opacity-0 image-placeholder my-10 m-auto flex flex-col">
         <img src="assets/images/office_workout.png" alt="office workout image">
         <div class="block text-center info mt-auto justify-end">
@@ -88,8 +85,6 @@
       </div>
       <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-green-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
       <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-green-500 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-  
-      <!-- Add additional indicators for each slide-->
       <ol class="carousel-indicators">
         <li class="inline-block mr-3">
           <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl color-blue hover:text-green-500">•</label>
@@ -114,8 +109,8 @@
       </ul>
       <p class="mx-4 font-normal text-blue-900">This is a solo projects at the end of the of the Microverse Main Technical Curriculum of the Ruby On Rails section. It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The main objective was to reproduce the design of liFEsTlye. - Mobile version Webpage inspired by Nelson Sakwa on Behance on behance, with a different theme. I choose to create a website named Polibot (filipino word for 'wanderer') where people can write articles about places they have visited in the continents of earth.</p>
       <div class="m-5 text-center">
-        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Live<i class="far fa-folder-open px-2"></i></button>
-        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></button>
+        <a href='https://polibot-web.herokuapp.com/' class='bg-green-500 text-white p-3 font-bold rounded'>See Live<i class="far fa-folder-open px-2"></i></a>
+        <a href='https://github.com/wrakc/palibot' class='bg-green-500 text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></a>
       </div>
     </div>
   </div>
@@ -131,8 +126,8 @@
       </ul>
       <p class="mx-4 font-normal text-blue-900">This is a solo projects at the end of the of the Microverse Main Technical Curriculum of the HTML and CSS section. It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The main objective was to reproduce the design of The Directory of Schools Webpage inspired by Mathew Njuguna and others on behance, with a different theme. I choose to create a website named [gatherings] where people can meet in real life (after the COVID-19 situation) creating and sharing events across the region desired.</p>
       <div class="m-5 text-center">
-        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Live<i class="far fa-folder-open px-2"></i></button>
-        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></button>
+        <a href='https://rawcdn.githack.com/wrakc/HTML-CSS-Capstone-Project/572a13c4445d57000b13ceae753b40a919cde4f8/index.html' class='bg-green-500 text-white p-3 font-bold rounded'>See Live<i class="far fa-folder-open px-2"></i></a>
+        <a href='https://github.com/wrakc/HTML-CSS-Capstone-Project' class='bg-green-500 text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></a>
       </div>
     </div>
   </div>
@@ -151,8 +146,7 @@
         Get feedback about the achievement of technical and soft skills gained during the ruby section of the program.
         Basically, this bot returns a random link video to a YouTube workout where people who works at home or offices can use to stretching.</p>
       <div class="m-5 text-center">
-        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Live<i class="far fa-folder-open px-2"></i></button>
-        <button class='bg-green-500 text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></button>
+        <a href='https://github.com/wrakc/slack-10-min-office-workout' class='bg-green-500 text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></a>
       </div>
     </div>
   </div>
@@ -208,7 +202,7 @@
         <h2 id="contact">I am always interested in hearing about new projects, so if you want to chat please get in touch.</h2>
       </div>
       <div class="my-10">
-        <script type="text/javascript">var submitted=false;</script>
+        <script>var submitted=false;</script>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='#portfolio'}"></iframe>
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc5FoMLAiDBSxSIDB38_yWngS5-K2zk7G5GNnMbmO60O5xocw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;" class="flex-col flex mx-5 form body-div">
           <input type="text" name="entry.2005620554" required placeholder="Full Name">
@@ -216,15 +210,15 @@
           <input type="text" name="entry.839337160"  required placeholder="Enter Text Here">
           <button type="submit" class="self-center bg-green-500 text-white p-3 font-bold rounded inline-block px-8 my-3">Get in touch</button>
         </form>
-        <span class='text-center font-bold text-blue-900'>
-          <ul class="text-2xl">
+        <div class='text-center font-bold text-blue-900'>
+          <div class="text-2xl py-5">
             <a href='https://twitter.com/carlosveigadev'><i class="fab fa-twitter px-2"></i></a>
             <a href='https://www.linkedin.com/in/chveiga/'><i class="fab fa-linkedin-in px-2"></i></a>
             <a href='https://github.com/wrakc'><i class="fab fa-github px-2"></i></a>
             <a href='https://angel.co/u/chveiga'><i class="fab fa-angellist px-2"></i></a>
-          </ul>
+          </div>
           <h2 class='py-5 font-thin'>carlosveigadev@gmail.com</h2>
-        </span>
+        </div>
       </div>
     </div>
   </div>
