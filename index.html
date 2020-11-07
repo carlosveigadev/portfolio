@@ -7,22 +7,22 @@
   <script src="https://kit.fontawesome.com/187d11cae1.js" crossorigin="anonymous"></script>
  </head>
  <body class="flex-inline">
-  <nav class='flex'>
+  <nav class='bg-transparent fixed flex w-full justify-between z-40 text-blue-900'>
     <div>
       <h2 class="p-2 font-bold">Welcome</h2>
     </div>
-    <div class="dropdown inline-block mr-2 absolute right-0">
+    <div class="dropdown mr-2 ">
       <button class="font-semibold p-2 rounded text-xl">
         <span><i class="fa fa-bars"></i></span>
       </button>
-      <ul class="dropdown-menu absolute hidden inset-y-100 p-6 pt-1 right-0 rounded">
-        <li><a href="">Portfolio</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
+      <ul class="dropdown-menu shadow-xs absolute hidden inset-y-100 p-4 right-0 rounded bg-white">
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
    </nav>
-   <div class="main-bg py-10">
+   <div class="main-bg py-10 body-div">
     <h2 class='text-center text-4xl m-5 font-bold text-blue-900'>  
       <span>Hello there, I am Carlos Veiga.</span><br>
       <span class="text-green-500">I am a full stack webdeveloper.</span><br>
@@ -38,7 +38,7 @@
     </h2>
    </div>
    <div>
-    <h2 class='text-center text-4xl m-5 px-12 font-bold text-blue-900'>My Recent Works</h2>
+    <h2 id='portfolio' class='text-center text-4xl m-5 px-12 font-bold text-blue-900'>My Recent Works</h2>
     <div class='border-bottom'>&nbsp;</div>
   </div>
   <div class="carousel relative bg-white">
@@ -103,7 +103,7 @@
       </ol>
     </div>
   </div>
-  <div id='project01' class='project_modal z-20'>
+  <div id='project01' class='project_modal z-40'>
     <div class='modal-content'>
       <div onclick="document.getElementById('project01').style.display='none'"
       class="inline-block mr-2 absolute right-0 px-5 font-extrabold cursor-pointer">x</div>
@@ -119,7 +119,7 @@
       </div>
     </div>
   </div>
-  <div id='project02' class='project_modal z-20'>
+  <div id='project02' class='project_modal z-40'>
     <div class='modal-content'>
       <div onclick="document.getElementById('project02').style.display='none'"
       class="inline-block mr-2 absolute right-0 px-5 font-extrabold cursor-pointer">x</div>
@@ -136,7 +136,7 @@
       </div>
     </div>
   </div>
-  <div id='project03' class='project_modal z-20'>
+  <div id='project03' class='project_modal z-40'>
     <div class='modal-content'>
       <div onclick="document.getElementById('project03').style.display='none'"
       class="inline-block mr-2 absolute right-0 px-5 font-extrabold cursor-pointer">x</div>
@@ -156,75 +156,78 @@
       </div>
     </div>
   </div>
-  <div class="text-center mt-auto pt-20 about-bg">
+  <div class="text-center mt-auto pt-20 about-bg body-div">
     <div class='text-center text-4xl mx-10 font-extrabold text-blue-900'>  
-      <h2>About me</h2>
+      <h2 id="about">About me</h2>
       <h2 class="text-xl my-5 font-normal">Turning all my efforts into improving my problem-solving skills and creativeness on software development and data analysis with the help of Microverse Bootcamp. With a bachelor's degree in Biological Sciences, I hope one day be able to merge both these worlds to make people's lives better.</h2>
     </div>
     <button class='bg-green-500 text-white p-3 font-bold rounded'>Get My Resume</button>
   </div>
-  <div class=" my-10 m-auto image-placeholder-2">
-    <div class="flex-col place-items-center">
-      <img src="assets/images/icon-languages.svg" alt="Languages Icon" class="mx-auto mt-5">
-      <h2 class="text-center mb-10 text-blue-900 text-2xl ">Languages</h2>
-      <ul class="flex justify-between mx-2 my-auto">
-        <li><a href="">JavaScript</a></li>
-        <li><a href="">Ruby</a></li>
-        <li><a href="">HTML</a></li>
-        <li><a href="">CSS</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class=" my-10 m-auto image-placeholder-2">
-    <div class="flex-col place-items-center">
-      <img src="assets/images/icon-frameworks.svg" alt="Languages Icon" class="mx-auto mt-5">
-      <h2 class="text-center mb-5 text-blue-900 text-2xl ">Frameworks</h2>
-      <ul class="flex flex-wrap justify-around">
-        <li><a href="">Bootstrap</a></li>
-        <li><a href="">Tailwind</a></li>
-        <li><a href="">Ruby on Rails</a></li>
-        <li><a href="">RSpec</a></li>
-        <li><a href="">Capybara</a></li>
-        <li><a href="">React</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class=" my-10 m-auto image-placeholder-2">
-    <div class="flex-col place-items-center">
-      <img src="assets/images/icon-languages.svg" alt="Languages Icon" class="mx-auto mt-5">
-      <h2 class="text-center mb-5 text-blue-900 text-2xl ">Skills</h2>
-      <ul class="flex flex-wrap justify-between mx-2 my-auto">
-        <li><a href="">Git</a></li>
-        <li><a href="">Remote Work</a></li>
-        <li><a href="">Adaptability</a></li>
-        <li><a href="">Problem-solving</a></li>
-        <li><a href="">Conflict resolution</a></li>
-      </ul>
-    </div>
-  </div>
-  <div>
-    <div class='text-center text-4xl mx-10 font-extrabold text-blue-900'>  
-      <h2>I am always interested in hearing about new projects, so if you want to chat please get in touch.</h2>
-    </div>
-    <div class="my-10">
-      <script type="text/javascript">var submitted=false;</script>
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='change this';}"></iframe>
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc5FoMLAiDBSxSIDB38_yWngS5-K2zk7G5GNnMbmO60O5xocw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;" class="flex-col flex mx-5 form text-center ">
-        <input type="text" name="entry.2005620554" required placeholder="Full Name">
-        <input type="email" name="entry.1045781291" required placeholder="Email Address">
-        <input type="text" name="entry.839337160"  required placeholder="Enter Text Here">
-        <button type="submit" class="self-center bg-green-500 text-white p-3 font-bold rounded inline-block px-8 my-3">Get in touch</button>
-      </form>
-      <span class='text-center font-bold text-blue-900'>
-        <ul class="text-2xl">
-          <a href='https://twitter.com/carlosveigadev'><i class="fab fa-twitter px-2"></i></a>
-          <a href='https://www.linkedin.com/in/chveiga/'><i class="fab fa-linkedin-in px-2"></i></a>
-          <a href='https://github.com/wrakc'><i class="fab fa-github px-2"></i></a>
-          <a href='https://angel.co/u/chveiga'><i class="fab fa-angellist px-2"></i></a>
+  <div class="inline-block xl:flex xl:flex-wrap">
+    <div class=" my-10 m-auto image-placeholder-2">
+      <div class="flex-col place-items-center">
+        <img src="assets/images/icon-languages.svg" alt="Languages Icon" class="mx-auto mt-5">
+        <h2 class="text-center mb-10 text-blue-900 text-2xl ">Languages</h2>
+        <ul class="flex justify-between mx-2 my-auto">
+          <li><a href="">JavaScript</a></li>
+          <li><a href="">Ruby</a></li>
+          <li><a href="">HTML</a></li>
+          <li><a href="">CSS</a></li>
         </ul>
-        <h2 class='py-5 font-thin'>carlosveigadev@gmail.com</h2>
-      </span>
+      </div>
+    </div>
+    <div class=" my-10 m-auto image-placeholder-2">
+      <div class="flex-col place-items-center">
+        <img src="assets/images/icon-frameworks.svg" alt="Languages Icon" class="mx-auto mt-5">
+        <h2 class="text-center mb-5 text-blue-900 text-2xl ">Frameworks</h2>
+        <ul class="flex flex-wrap justify-around">
+          <li><a href="">Bootstrap</a></li>
+          <li><a href="">Tailwind</a></li>
+          <li><a href="">Ruby on Rails</a></li>
+          <li><a href="">RSpec</a></li>
+          <li><a href="">Capybara</a></li>
+          <li><a href="">React</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class=" my-10 m-auto image-placeholder-2">
+      <div class="flex-col place-items-center">
+        <img src="assets/images/icon-languages.svg" alt="Languages Icon" class="mx-auto mt-5">
+        <h2 class="text-center mb-5 text-blue-900 text-2xl ">Skills</h2>
+        <ul class="flex flex-wrap justify-between mx-2 my-auto">
+          <li><a href="">Git</a></li>
+          <li><a href="">Remote Work</a></li>
+          <li><a href="">Adaptability</a></li>
+          <li><a href="">Problem-solving</a></li>
+          <li><a href="">Conflict resolution</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class='contact-bg text-center text-4xl font-extrabold text-blue-900 md:mx-10 body-div'>  
+        <h2 id="contact">I am always interested in hearing about new projects, so if you want to chat please get in touch.</h2>
+      </div>
+      <div class="my-10">
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='#portfolio;}"></iframe>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc5FoMLAiDBSxSIDB38_yWngS5-K2zk7G5GNnMbmO60O5xocw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;" class="flex-col flex mx-5 form body-div">
+          <input type="text" name="entry.2005620554" required placeholder="Full Name">
+          <input type="email" name="entry.1045781291" required placeholder="Email Address">
+          <input type="text" name="entry.839337160"  required placeholder="Enter Text Here">
+          <button type="submit" class="self-center bg-green-500 text-white p-3 font-bold rounded inline-block px-8 my-3">Get in touch</button>
+        </form>
+        <span class='text-center font-bold text-blue-900'>
+          <ul class="text-2xl">
+            <a href='https://twitter.com/carlosveigadev'><i class="fab fa-twitter px-2"></i></a>
+            <a href='https://www.linkedin.com/in/chveiga/'><i class="fab fa-linkedin-in px-2"></i></a>
+            <a href='https://github.com/wrakc'><i class="fab fa-github px-2"></i></a>
+            <a href='https://angel.co/u/chveiga'><i class="fab fa-angellist px-2"></i></a>
+          </ul>
+          <h2 class='py-5 font-thin'>carlosveigadev@gmail.com</h2>
+        </span>
+      </div>
     </div>
   </div>
+  
  </body>
 </html>

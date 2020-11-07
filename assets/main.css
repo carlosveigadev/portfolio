@@ -5,6 +5,10 @@
   background-position: center top;
 }
 
+nav div ul li {
+  padding: 5px 0;
+}
+
 .border-bottom {
   margin: 0 auto;
   width: 20%;
@@ -49,8 +53,8 @@
   border-radius: 8px;
   background-color:#FFFFFF;
   color: #48bb78;
-  padding: 1em;
-  margin: 5px 0;
+  padding: 0.8em;
+  margin: 5px 4px;
 }
 
 .info {
@@ -107,6 +111,7 @@
   background-color: #fefefe;
   border: 1px solid #888;
   height: 100%;
+  overflow-y: scroll;
 }
 
 .modal-content img {
@@ -139,6 +144,41 @@
     height: 270px;
     margin: 0 auto;
     padding: 1em;
+  }  
+}
+
+@media (min-width: 450px) {
+
+  .main-bg {
+    background-image: url(images/Header-llustration-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
   }
-  
+
+  .body-div {
+    padding: 0 10em;
+  }
+
+  .about-bg {
+    background-image: url(images/illustration_about_me_desktop.png) ;    
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  .contact-bg {
+    background-image: url(/images/illustration-about-me-2-desktop.png) ;    
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  .form input {
+    width: 80%;
+    margin: 5px auto;
+
+  }
+
+  .modal-content {
+    overflow: hidden;
+  }
 }
