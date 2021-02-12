@@ -42,6 +42,8 @@ nav div ul li {
 }
 
 .image-placeholder img {
+  min-width: 304px;
+  min-height: 209px;
   max-width: 608px;
   max-height: 418px;
   margin: 0 auto;
@@ -98,7 +100,7 @@ nav div ul li {
   border-radius: 8px;
   box-sizing: border-box;
   text-indent: 10px;
-  width: 100px;
+  width: 100%;
 }
 
 .form textarea {
@@ -149,12 +151,13 @@ nav div ul li {
   cursor: pointer;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 610px) {
   .image-placeholder {
     max-width: 340px;
   }
 
   .image-placeholder img {
+    max-width: 270px;
     height: 270px;
     margin: 0 auto;
     padding: 1em;
@@ -187,7 +190,7 @@ nav div ul li {
 
   .form input,
   .form textarea {
-    width: 80%;
+    width: 100%;
     margin: 5px auto;
   }
 
