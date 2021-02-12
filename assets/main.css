@@ -95,7 +95,7 @@ nav div ul li {
 .form input,
 .form textarea {
   border: 1px solid #d0d9d4;
-  margin: 10px 0;
+  margin: 1em 0;
   height: 50px;
   border-radius: 8px;
   box-sizing: border-box;
@@ -173,7 +173,7 @@ nav div ul li {
   }
 
   .body-div {
-    padding: 0 10em;
+    padding: 0 2em;
   }
 
   .about-bg {
@@ -191,7 +191,7 @@ nav div ul li {
   .form input,
   .form textarea {
     width: 100%;
-    margin: 5px auto;
+    margin: 1em auto;
   }
 
   .modal-content {
