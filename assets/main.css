@@ -9,6 +9,14 @@ nav div ul li {
   padding: 5px 0;
 }
 
+.bg-green {
+  background-color: #195d3e;
+}
+
+.text-green {
+  color: #195d3e;
+}
+
 .border-bottom {
   margin: 0 auto;
   width: 20%;
@@ -21,7 +29,7 @@ nav div ul li {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #48bb78;
+  background: #195d3e;
   height: 10px;
   border-radius: 10px 10px 10px 10px;
 }
@@ -34,8 +42,8 @@ nav div ul li {
 }
 
 .image-placeholder img {
-  width: 640px;
-  height: 450px;
+  max-width: 608px;
+  max-height: 418px;
   margin: 0 auto;
   padding: 1em;
 }
@@ -52,7 +60,7 @@ nav div ul li {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   background-color: #fff;
-  color: #48bb78;
+  color: #195d3e;
   padding: 0.8em;
   margin: 5px 4px;
 }

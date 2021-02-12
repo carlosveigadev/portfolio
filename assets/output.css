@@ -1525,8 +1525,10 @@ video {
 .divide-green-500 > :not(template) ~ :not(template) {
   --divide-opacity: 1;
 
-  border-color: #48bb78;
-  border-color: rgba(72, 187, 120, var(--divide-opacity));
+  border-color: #36b37e;
+  border-color: red;
+
+  /* rgba(25, 93, 62, var(--divide-opacity)); */
 }
 
 .divide-green-600 > :not(template) ~ :not(template) {
