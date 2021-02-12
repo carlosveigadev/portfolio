@@ -6,7 +6,7 @@
   <title>Welcome to my Portfolio</title>
   <link href="assets/main.css" type="text/css" rel="stylesheet" />
   <link href="assets/output.css" type="text/css" rel="stylesheet" />
-  <link href="assets/carrousel.css" type="text/css" rel="stylesheet" />
+  <link href="assets/carousel.css" type="text/css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/187d11cae1.js" crossorigin="anonymous"></script>
  </head>
  <body class="flex-inline">
@@ -53,11 +53,12 @@
           <h2 class='text-xl text-blue-900 font-bold'>paliBOT - A travelling articles blog.</h2>
           <ul>
             <li class='p-3 font-bold rounded button-gray my-2'>Ruby on Rails</li>
+            <li class='p-3 font-bold rounded button-gray my-2'>Bootstrap</li>
           </ul>
           <button onclick="document.getElementById('project01').style.display='block'" class='bg-green text-white p-3 font-bold rounded mt-5'>See Project</button>
         </div>
       </div>
-      <label for="carousel-4" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-green-900 rounded-full bg-white hover:bg-green leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+      <label for="carousel-5" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-green-900 rounded-full bg-white hover:bg-green leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
       <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-green-900 rounded-full bg-white hover:bg-green  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
       <input class="carousel-open" type="radio" id="carousel-2" name="carousel" hidden="">
       <div class="carousel-item absolute opacity-0 image-placeholder my-10 m-auto flex flex-col">
@@ -92,13 +93,28 @@
         <div class="block text-center info mt-auto justify-end">
           <h2 class='text-xl text-blue-900 font-bold'>Clara's Quest Game</h2>
           <ul>
-            <li class='p-3 font-bold rounded button-gray my-2'>JS and Phaser 3</li>
+            <li class='p-3 font-bold rounded button-gray my-2'>JavaScript</li>
+            <li class='p-3 font-bold rounded button-gray my-2'>Phaser 3</li>
           </ul>
           <button onclick="document.getElementById('project04').style.display='block'" class='bg-green text-white p-3 font-bold rounded mt-5'>See Project</button>
         </div>
       </div>
       <label for="carousel-3" class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-green-900  rounded-full bg-white hover:bg-green leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-      <label for="carousel-1" class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-green-900 rounded-full bg-white hover:bg-green leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+      <label for="carousel-5" class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-green-900 rounded-full bg-white hover:bg-green leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+      <input class="carousel-open" type="radio" id="carousel-5" name="carousel" hidden="">
+      <div class="carousel-item absolute opacity-0 image-placeholder my-10 m-auto flex flex-col">
+        <img src="assets/images/weatherapp.jpeg" alt="Weather API project image">
+        <div class="block text-center info mt-auto justify-end">
+          <h2 class='text-xl text-blue-900 font-bold'>Weather by GIFs</h2>
+          <ul>
+            <li class='p-3 font-bold rounded button-gray my-2'>JavaScript</li>
+            <li class='p-3 font-bold rounded button-gray my-2'>Tailwind</li>
+          </ul>
+          <button onclick="document.getElementById('project05').style.display='block'" class='bg-green text-white p-3 font-bold rounded mt-5'>See Project</button>
+        </div>
+      </div>
+      <label for="carousel-4" class="prev control-5 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-green-900  rounded-full bg-white hover:bg-green leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+      <label for="carousel-1" class="next control-5 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-green-900 rounded-full bg-white hover:bg-green leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
       <ol class="carousel-indicators">
         <li class="inline-block mr-3">
           <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl hover:text-green">•</label>
@@ -112,6 +128,9 @@
         <li class="inline-block mr-3">
           <label for="carousel-4" class="carousel-bullet cursor-pointer block text-4xl hover:text-green">•</label>
         </li>
+        <li class="inline-block mr-3">
+          <label for="carousel-5" class="carousel-bullet cursor-pointer block text-4xl hover:text-green">•</label>
+        </li>
       </ol>
     </div>
   </div>
@@ -123,6 +142,7 @@
       <h2 class="text-2xl mx-4 font-bold text-blue-900">paliBOT - A travelling articles blog.</h2>
       <ul class='p-3'>
         <li class='p-3 font-bold rounded button-gray my-2'>Ruby on Rails</li>
+        <li class='p-3 font-bold rounded button-gray my-2'>Bootstrap</li>
       </ul>
       <p class="mx-4 font-normal text-blue-900">This is a Ruby On Rails project developed at the end of the Microverse Main Technical Curriculum.
         It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program.
@@ -174,6 +194,7 @@
       <h2 class="text-2xl mx-4 font-bold text-blue-900">Clara's Quest Game</h2>
       <ul class='p-3'>
         <li class='p-3 font-bold rounded button-gray my-2'>JavaScript</li>
+        <li class='p-3 font-bold rounded button-gray my-2'>Phaser 3</li>
       </ul>
       <p class="mx-4 font-normal text-blue-900">This is a JavaScript and Phaser 3 library project developed at the end of the Microverse Main Technical Curriculum of the JavaScript section.
       It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program.
@@ -181,6 +202,23 @@
       <div class="m-5 text-center">
         <a href='https://carlosveigadev.github.io/claras-quest/' target="_blank" rel="noopener noreferrer" class='bg-green text-white p-3 font-bold rounded'>See Live<i class="far fa-folder-open px-2"></i></a>
         <a href='https://github.com/carlosveigadev/claras-quest' target="_blank" rel="noopener noreferrer" class='bg-green text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></a>
+      </div>
+    </div>
+  </div>
+  <div id='project05' class='project_modal z-40'>
+    <div class='modal-content'>
+      <div onclick="document.getElementById('project05').style.display='none'"
+      class="inline-block mr-2 absolute right-0 px-5 font-extrabold cursor-pointer">x</div>
+      <img src="assets/images/weatherapp.jpeg" class='m-auto' alt="Weather App Image">
+      <h2 class="text-2xl mx-4 font-bold text-blue-900">Weather by GIFs</h2>
+      <ul class='p-3'>
+        <li class='p-3 font-bold rounded button-gray my-2'>JavaScript</li>
+        <li class='p-3 font-bold rounded button-gray my-2'>Tailwind</li>
+      </ul>
+      <p class="mx-4 font-normal text-blue-900">In this project, I used JavaScript to learn and practice fetching data from APIs, then I rendered a simple webpage that shows the weather of a city provided by the input of the user.</p>
+      <div class="m-5 text-center">
+        <a href='https://carlosveigadev.github.io/weather-by-gifs/' target="_blank" rel="noopener noreferrer" class='bg-green text-white p-3 font-bold rounded'>See Live<i class="far fa-folder-open px-2"></i></a>
+        <a href='https://github.com/carlosveigadev/weather-by-gifs' target="_blank" rel="noopener noreferrer" class='bg-green text-white p-3 font-bold rounded'>See Source<i class="fab fa-github px-2"></i></a>
       </div>
     </div>
   </div>
