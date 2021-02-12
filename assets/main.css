@@ -86,17 +86,23 @@ nav div ul li {
   background-position: center top;
 }
 
-.form input {
+.form label {
+  display: flex;
+}
+
+.form input,
+.form textarea {
+  border: 1px solid #d0d9d4;
   margin: 10px 0;
   height: 50px;
   border-radius: 8px;
-  border: 1px solid #d0d9d4;
   box-sizing: border-box;
   text-indent: 10px;
+  width: 100px;
 }
 
-.form input:nth-child(3) {
-  height: 115px;
+.form textarea {
+  height: 100px;
 }
 
 /* The Modal (background) */
@@ -179,7 +185,8 @@ nav div ul li {
     background-position: center top;
   }
 
-  .form input {
+  .form input,
+  .form textarea {
     width: 80%;
     margin: 5px auto;
   }
