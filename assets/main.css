@@ -23,6 +23,10 @@ nav div ul li {
   position: relative;
 }
 
+.white-shadow {
+  text-shadow: 2px 2px white;
+}
+
 .border-bottom::after {
   content: '';
   position: absolute;
