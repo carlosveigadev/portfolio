@@ -1,7 +1,8 @@
 @media (max-width: 768px) {
-  .navContainer {
+  body .navContainer {
     position: fixed;
     bottom: 0;
+    margin-bottom: 0;
   }
   
   .navContainer > div{
@@ -12,6 +13,8 @@
   .navContainer > div > div  {
     display: inline-flex;
     flex-direction: column;
+    width: 14em;
+    text-align: center;
   }  
 
   .navContainer > div > div > a:first-child {
@@ -58,6 +61,7 @@
 .navContainer {
   position: fixed;
   bottom: 0;
+  margin-bottom: 3em;
 }
 
 .navContainer div {
