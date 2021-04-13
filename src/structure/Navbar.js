@@ -1,11 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
+import { NavLink } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import {
-  Box, Link, Text, Stack, Flex,
+  Box, Text, Flex,
 } from '@chakra-ui/react';
+import style from '../assets/css/Navbar.module.css';
 
 const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,15 +15,17 @@ const Navbar = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <NavbarContainer {...props}>
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} />
-    </NavbarContainer>
+    <Flex>
+      <NavbarContainer className={style.navContainer} {...props}>
+        <MenuToggle toggle={toggle} isOpen={isOpen} />
+        <MenuLinks isOpen={isOpen} />
+      </NavbarContainer>
+    </Flex>
   );
 };
 
 const MenuToggle = ({ toggle, isOpen }) => (
-  <Box display={{ base: 'block', md: 'none' }} onClick={toggle}>
+  <Box display={{ base: 'inline-flex', md: 'none' }} onClick={toggle}>
     {isOpen ? <CloseIcon /> : <MenuIcon />}
   </Box>
 );
@@ -29,52 +33,58 @@ const MenuToggle = ({ toggle, isOpen }) => (
 const CloseIcon = () => (
   <>
     <title>Menu</title>
-    <IoMdClose />
+    <IoMdClose className={style.closeIcon} />
   </>
 );
 
 const MenuIcon = () => (
   <>
     <title>Close</title>
-    <AiOutlineMenu />
+    <AiOutlineMenu className={style.menuIcon} />
   </>
 );
 
 const MenuItem = ({
   children, to = '/', ...rest
 }) => (
-  <Link href={to}>
-    <Text display="block" {...rest}>
+  <NavLink
+    className={style.navbar}
+    exact
+    to={to}
+    activeStyle={{
+      color: '#FFFFFF',
+      backgroundColor: '#00887A',
+    }}
+  >
+    <Text display="inline" {...rest}>
       {children}
     </Text>
-  </Link>
+  </NavLink>
 );
 
 const MenuLinks = ({ isOpen }) => (
   <Box
-    display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
+    justifyContent="center"
+    className={style.navbox}
+    display={{ base: isOpen ? 'flex' : 'none', md: 'flex' }}
     flexBasis={{ base: '100%', md: 'auto' }}
   >
-    <Stack>
+    <Flex fontSize="30px" color="#2C2C2C" shadow="2xl" borderLeftRadius="50px" borderRightRadius="50px">
       <MenuItem to="/">Home</MenuItem>
       <MenuItem to="/about-me">About Me</MenuItem>
       <MenuItem to="/projects">Projects</MenuItem>
       <MenuItem to="/contact">Contact</MenuItem>
-    </Stack>
+    </Flex>
   </Box>
 );
 
 const NavbarContainer = ({ children, ...props }) => (
   <Flex
+    display="inline-block"
     as="nav"
-    align="center"
-    justify="space-between"
     wrap="wrap"
     w="100%"
-    mb={8}
     p={8}
-    bg={['black', 'black', 'transparent', 'transparent']}
-    color={['red', 'red', 'blue', 'blue']}
     {...props}
   >
     {children}

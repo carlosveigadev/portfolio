@@ -1,0 +1,65 @@
+@media (max-width: 768px) {
+  .navContainer {
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .navContainer > div{
+    background-color: white;
+    border-radius: 0;
+  }  
+
+  .navContainer > div > div  {
+    display: inline-flex;
+    flex-direction: column;
+  }  
+
+  .navContainer > div > div > a:first-child {
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 0;
+  }
+
+  .navContainer > div > div > a:last-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 50px;
+  }
+
+  .closeIcon {
+    color: #2c2c2c;
+    font-size: 50px;
+    position: fixed;
+    right: 0.5em;
+    top: 5em
+  }
+
+  .menuIcon {
+    color: #2c2c2c;
+    font-size: 50px;
+  }
+
+}
+
+.navbar {
+  padding: 15px 20px;
+  background-color: #77A6F7;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar:first-child {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.navbar:last-child {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.navContainer {
+  position: fixed;
+  bottom: 0;
+}
+
+.navContainer div {
+  flex-direction: row;
+}
