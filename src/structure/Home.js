@@ -1,4 +1,6 @@
-import { Center, Text, Circle } from '@chakra-ui/react';
+import {
+  Center, Text, Circle, Link,
+} from '@chakra-ui/react';
 import {
   FaGithubAlt, FaTwitter, FaLinkedinIn, FaAngellist,
 } from 'react-icons/fa';
@@ -17,10 +19,34 @@ const Home = () => (
         don&apos;t hesitate to contact me.
       </Text>
       <Center className={style.icons}>
-        <Circle><FaGithubAlt /></Circle>
-        <Circle><FaTwitter /></Circle>
-        <Circle><FaLinkedinIn /></Circle>
-        <Circle><FaAngellist /></Circle>
+        <Link
+          href="https://www.linkedin.com/in/carlosveigadev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Circle><FaGithubAlt /></Circle>
+        </Link>
+        <Link
+          href="https://twitter.com/carlosveigadev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Circle><FaTwitter /></Circle>
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/carlosveigadev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Circle><FaLinkedinIn /></Circle>
+        </Link>
+        <Link
+          href="https://angel.co/u/carlosveiga"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Circle><FaAngellist /></Circle>
+        </Link>
       </Center>
     </Center>
     <Navbar />
