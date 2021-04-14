@@ -3,10 +3,11 @@
     position: fixed;
     bottom: 0;
     margin-bottom: 0;
+    background-color: transparent;
   }
   
   .navContainer > div{
-    background-color: white;
+    background-color: transparent;
     border-radius: 0;
   }  
 
@@ -30,9 +31,9 @@
   .closeIcon {
     color: #2c2c2c;
     font-size: 50px;
-    position: fixed;
-    right: 0.5em;
-    top: 5em
+    position: absolute;
+    right: 1em;
+    bottom: 5.5em;
   }
 
   .menuIcon {
@@ -41,6 +42,12 @@
   }
 
 }
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
 
 .navbar {
   padding: 15px 20px;
