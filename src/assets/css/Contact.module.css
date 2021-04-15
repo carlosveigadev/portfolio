@@ -39,10 +39,11 @@
 }
 
 .contact button {
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
   font-size: 1.25em;
-  color: #FFF9FB;
+  color: #2c2c2c;
   text-align: center;
-  background-color: #00887A;
+  background-color: #77A6F7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   margin: 2em;
@@ -51,5 +52,8 @@
 }
 
 .contact button:hover {
-  color: #2c2c2c
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  background-color:  #00887A;
+  color:  #FFF9FB;
 }
