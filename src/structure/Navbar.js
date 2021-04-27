@@ -65,7 +65,6 @@ const MenuItem = ({
 const MenuLinks = ({ isOpen }) => (
   <Box
     justifyContent="center"
-    className={style.navbox}
     display={{ base: isOpen ? 'flex' : 'none', md: 'flex' }}
     flexBasis={{ base: '100%', md: 'auto' }}
   >

@@ -1,5 +1,16 @@
 @media (min-width: 768px) {
+  body .about {
+    flex-direction: row;
+    margin: 0 4em;
+  }
 
+  body .about button {
+    width: 800px;
+  }
+
+  body .about p {
+    margin: 2em;
+  }
 }
 
 .about p {
@@ -16,11 +27,19 @@
 }
 
 .about button {
-  font-weight: 400;
-  background-color:  #00887A;
-  color: #FFFFFF;
-  margin: 1em 0;
-  width: 40%;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  font-size: 1.25em;
+  color: #2c2c2c;
+  background-color: #77A6F7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  margin: 2em;
+  padding: 25px 0;
+  width: 200px;
+}
+
+.about button:hover {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color:  #00887A;
+  color:  #FFF9FB;
 }

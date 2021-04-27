@@ -10,7 +10,7 @@
     background-color: transparent;
     border-radius: 0;
   }  
-
+  
   .navContainer > div > div  {
     display: inline-flex;
     flex-direction: column;
@@ -40,7 +40,6 @@
     color: #2c2c2c;
     font-size: 50px;
   }
-
 }
 
 body {
