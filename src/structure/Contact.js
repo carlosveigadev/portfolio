@@ -10,7 +10,6 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (event) => {
     if (event.target.id === 'name') {
@@ -22,16 +21,6 @@ const Contact = () => {
     }
   };
 
-  const onLoad = () => {
-    if (submitted) {
-      alert('Thanks for contacting me! I will get back as soon as possible.');
-    }
-  };
-
-  const onSubmit = () => {
-    setSubmitted(true);
-  };
-
   return (
     <>
       <Center className={style.contact}>
@@ -39,8 +28,7 @@ const Contact = () => {
           I am always interested in hearing about new projects,
           so if you want to chat please get in touch.
         </Text>
-        <iframe title="form" name="hidden_iframe" id="hidden_iframe" style={{ display: 'none' }} onLoad={onLoad} />
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc5FoMLAiDBSxSIDB38_yWngS5-K2zk7G5GNnMbmO60O5xocw/formResponse" method="post" target="hidden_iframe" onSubmit={onSubmit}>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc5FoMLAiDBSxSIDB38_yWngS5-K2zk7G5GNnMbmO60O5xocw/formResponse" method="post" target="hidden_iframe">
           <Input type="text" name="entry.2005620554" required placeholder="Full Name" id="name" value={name} onChange={handleChange} />
           <Input type="email" name="entry.1045781291" required placeholder="Email Address" id="email" value={email} onChange={handleChange} />
           <Textarea name="entry.839337160" required placeholder="Enter Text Here" value={message} onChange={handleChange} />
