@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 930px) {
   body .about {
     flex-direction: row;
     margin: 0 4em;
@@ -11,6 +11,23 @@
   body .about p {
     margin: 2em;
   }
+
+  body .skillbox {
+    flex-direction: row;
+    display: flex;
+  }
+
+  body .skillbox > div {
+    width: 300px;
+    height: 350px;
+    margin: 0 auto;
+  }
+
+  body .firstBox {
+    margin: auto 0;
+  }
+
+
 }
 
 .about p {
@@ -42,4 +59,40 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color:  #00887A;
   color:  #FFF9FB;
+}
+
+.skillbox {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7em;
+}
+
+.skillbox > div {
+  flex-direction: column;
+  width: 80%;
+  margin: 1em auto;
+  filter: drop-shadow(0px 4px 4px rgba(102, 30, 255, 0.25));
+  background: rgba(211, 227, 252, 0.7);
+  border-radius: 25px;
+}
+
+body {
+  overflow-y: auto;
+}
+
+.skillboxInside {
+  align-items: center;
+}
+
+.skillBoxTxt {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-top: 1em;
+  color: #77A6F7;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.itemWrap {
+  color: #2C2C2C;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
