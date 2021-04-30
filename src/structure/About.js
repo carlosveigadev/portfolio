@@ -17,7 +17,7 @@ const About = () => {
     box2: {
       imageUrl: frameworkLogo,
       name: 'Frameworks',
-      skills: ['Bootstrap', 'Tailwind', 'Ruby on Rails', 'RSPec', 'Capybara', 'React & Redux'],
+      skills: ['Bootstrap', 'Tailwind', 'Ruby on Rails', 'RSPec', 'AWS', 'React & Redux', 'Node'],
     },
     box3: {
       imageUrl: softSkillLogo,
