@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Flex,
   Modal,
@@ -25,6 +24,7 @@ import officeWorkoutImg from '../assets/images/office_workout.png';
 import javascriptLogo from '../assets/images/javascriptLogo.svg';
 import clarasQuestImg from '../assets/images/clara_quest.jpeg';
 import weatherImg from '../assets/images/weatherapp.jpeg';
+import style from '../assets/css/Projects.module.css';
 
 import Navbar from './Navbar';
 
@@ -32,6 +32,7 @@ const Projects = () => {
   // const [project, setProject] = useState('');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [icons, setIcons] = useState([htmlLogo, cssLogo]);
+  const [background, setBackground] = useState(gatheringsImg);
 
   const projects = [
     {
@@ -83,6 +84,7 @@ const Projects = () => {
 
   const handleClick = (e) => {
     setIcons(projects[e.id].logoLinks);
+    setBackground(projects[e.id].background);
   };
 
   return (
@@ -90,11 +92,12 @@ const Projects = () => {
       <Wrap m="1.5em">
         <Icons icons={icons} />
       </Wrap>
-      <Box bgColor="blue">
+      <Flex background={background} w="100%" h="450px">
         <Flex flexDirection="column">
           <ButtonProject handleClick={handleClick} buttons={projects} />
         </Flex>
-        <Button onClick={onOpen}>Check Project</Button>
+
+        <Button className={style.checkProjectButton} onClick={onOpen}>Check Project</Button>
 
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
@@ -113,7 +116,7 @@ const Projects = () => {
             </ModalFooter>
           </ModalContent>
         </Modal>
-      </Box>
+      </Flex>
       <Navbar />
     </>
   );
@@ -130,7 +133,15 @@ const Icons = ({ icons }) => (
 const ButtonProject = ({ buttons, handleClick }) => (
   buttons.map((element) => (
     <>
-      <Button onClick={handleClick} key="buttons">{element.title}</Button>
+      <button
+        className={style.button}
+        type="button"
+        onClick={handleClick}
+        key="buttons"
+        id={element.title}
+      >
+        <span className={style.txtOverflow}>{element.title}</span>
+      </button>
     </>
   ))
 );
