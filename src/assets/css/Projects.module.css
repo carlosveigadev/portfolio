@@ -29,7 +29,6 @@
 }
 
 .checkProjectButton {
-  position: absolute;
   display: inline-flex;
   place-self: flex-end;
   right: 0;
@@ -38,4 +37,12 @@
 
 body {
   overflow-y: hidden;
+}
+
+.backgroundImg {
+  background-size: cover;
+}
+
+.blur {
+  backdrop-filter: blur(2px);
 }

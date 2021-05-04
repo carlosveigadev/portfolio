@@ -13,6 +13,7 @@ import {
   Wrap,
   WrapItem,
   Avatar,
+  Box,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import cssLogo from '../assets/images/cssLogo.svg';
@@ -25,14 +26,13 @@ import javascriptLogo from '../assets/images/javascriptLogo.svg';
 import clarasQuestImg from '../assets/images/clara_quest.jpeg';
 import weatherImg from '../assets/images/weatherapp.jpeg';
 import style from '../assets/css/Projects.module.css';
-
 import Navbar from './Navbar';
 
 const Projects = () => {
   // const [project, setProject] = useState('');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [icons, setIcons] = useState([htmlLogo, cssLogo]);
-  const [background, setBackground] = useState(gatheringsImg);
+  const [background, setBackground] = useState(`url(${gatheringsImg})`);
 
   const projects = [
     {
@@ -92,31 +92,44 @@ const Projects = () => {
       <Wrap m="1.5em">
         <Icons icons={icons} />
       </Wrap>
-      <Flex background={background} w="100%" h="450px">
-        <Flex flexDirection="column">
-          <ButtonProject handleClick={handleClick} buttons={projects} />
+      <Box
+        backgroundImage={background}
+        className={style.backgroundImg}
+        w="100%"
+        h="450px"
+      >
+        <Flex className={style.blur} h="450px">
+          <Flex flexDirection="column">
+            <ButtonProject handleClick={handleClick} buttons={projects} />
+          </Flex>
+
+          <Button
+            position="absolute"
+            className={style.checkProjectButton}
+            onClick={onOpen}
+          >
+            Check Project
+          </Button>
+
+          <Modal isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>Modal Title</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <Text>This is a text</Text>
+              </ModalBody>
+
+              <ModalFooter>
+                <Button colorScheme="blue" mr={3} onClick={onClose}>
+                  Close
+                </Button>
+                <Button variant="ghost">Secondary Action</Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
         </Flex>
-
-        <Button className={style.checkProjectButton} onClick={onOpen}>Check Project</Button>
-
-        <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <Text>This is a text</Text>
-            </ModalBody>
-
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
-                Close
-              </Button>
-              <Button variant="ghost">Secondary Action</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-      </Flex>
+      </Box>
       <Navbar />
     </>
   );
