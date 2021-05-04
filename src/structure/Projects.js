@@ -104,9 +104,12 @@ const Projects = () => {
   return (
     <>
       <Wrap m="1.5em">
-        <Icons icons={icons} />
+        <Icons
+          icons={icons}
+        />
       </Wrap>
       <Box
+        transition="1s"
         backgroundImage={background}
         className={style.backgroundImg}
         w="100%"
@@ -119,7 +122,7 @@ const Projects = () => {
                 id={element.id}
                 className={element.id === activeButtonId ? style.is_active : style.button}
                 type="button"
-                key="buttons"
+                key={element.id}
                 onClick={handleClick}
               >
                 <span id={element.id} className={style.txtOverflow}>{element.title}</span>
