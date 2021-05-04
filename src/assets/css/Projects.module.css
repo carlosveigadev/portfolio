@@ -29,10 +29,24 @@
 }
 
 .checkProjectButton {
+  position: absolute;
+  padding: 0.5em;
   display: inline-flex;
   place-self: flex-end;
   right: 0;
   margin-bottom: 2em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #00887A;
+}
+
+.checkProjectButton:hover {
+  background-color: #77A6F7;
+  color: #2c2c2c;
 }
 
 body {
@@ -44,5 +58,6 @@ body {
 }
 
 .blur {
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
 }
+
