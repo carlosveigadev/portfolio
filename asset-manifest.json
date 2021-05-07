@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/carlosveigadev/portfolio.git/static/css/main.c1054419.chunk.css",
+    "main.js": "/carlosveigadev/portfolio.git/static/js/main.67689659.chunk.js",
+    "main.js.map": "/carlosveigadev/portfolio.git/static/js/main.67689659.chunk.js.map",
+    "runtime-main.js": "/carlosveigadev/portfolio.git/static/js/runtime-main.5742f31c.js",
+    "runtime-main.js.map": "/carlosveigadev/portfolio.git/static/js/runtime-main.5742f31c.js.map",
+    "static/js/2.45ea0506.chunk.js": "/carlosveigadev/portfolio.git/static/js/2.45ea0506.chunk.js",
+    "static/js/2.45ea0506.chunk.js.map": "/carlosveigadev/portfolio.git/static/js/2.45ea0506.chunk.js.map",
+    "index.html": "/carlosveigadev/portfolio.git/index.html",
+    "static/css/main.c1054419.chunk.css.map": "/carlosveigadev/portfolio.git/static/css/main.c1054419.chunk.css.map",
+    "static/js/2.45ea0506.chunk.js.LICENSE.txt": "/carlosveigadev/portfolio.git/static/js/2.45ea0506.chunk.js.LICENSE.txt",
+    "static/media/clara_quest.dd0e29fd.jpeg": "/carlosveigadev/portfolio.git/static/media/clara_quest.dd0e29fd.jpeg",
+    "static/media/computerLogo.eb57740e.svg": "/carlosveigadev/portfolio.git/static/media/computerLogo.eb57740e.svg",
+    "static/media/cssLogo.30444a28.svg": "/carlosveigadev/portfolio.git/static/media/cssLogo.30444a28.svg",
+    "static/media/find_my_wod.ec23acc3.png": "/carlosveigadev/portfolio.git/static/media/find_my_wod.ec23acc3.png",
+    "static/media/frameworkLogo.dae68e1f.svg": "/carlosveigadev/portfolio.git/static/media/frameworkLogo.dae68e1f.svg",
+    "static/media/getherings.db8a8a3a.png": "/carlosveigadev/portfolio.git/static/media/getherings.db8a8a3a.png",
+    "static/media/htmlLogo.5b14a939.svg": "/carlosveigadev/portfolio.git/static/media/htmlLogo.5b14a939.svg",
+    "static/media/javascriptLogo.1c7a923e.svg": "/carlosveigadev/portfolio.git/static/media/javascriptLogo.1c7a923e.svg",
+    "static/media/office_workout.e08365f9.png": "/carlosveigadev/portfolio.git/static/media/office_workout.e08365f9.png",
+    "static/media/palibot.2ef0da0b.png": "/carlosveigadev/portfolio.git/static/media/palibot.2ef0da0b.png",
+    "static/media/reduxLogo.05ecc79a.svg": "/carlosveigadev/portfolio.git/static/media/reduxLogo.05ecc79a.svg",
+    "static/media/rubyOnRailsLogo.e65189f7.svg": "/carlosveigadev/portfolio.git/static/media/rubyOnRailsLogo.e65189f7.svg",
+    "static/media/softSkills.bf5a7fec.svg": "/carlosveigadev/portfolio.git/static/media/softSkills.bf5a7fec.svg",
+    "static/media/weatherapp.712ae2c0.jpeg": "/carlosveigadev/portfolio.git/static/media/weatherapp.712ae2c0.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5742f31c.js",
+    "static/js/2.45ea0506.chunk.js",
+    "static/css/main.c1054419.chunk.css",
+    "static/js/main.67689659.chunk.js"
+  ]
+}
