@@ -16,7 +16,10 @@ import {
   Image,
   Box,
   Center,
+  Link,
 } from '@chakra-ui/react';
+import { FaGithubAlt } from 'react-icons/fa';
+import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { useState } from 'react';
 import cssLogo from '../assets/images/cssLogo.svg';
 import htmlLogo from '../assets/images/htmlLogo.svg';
@@ -168,7 +171,7 @@ const Projects = () => {
                   {showProject.text}
 
                 </Text>
-                <Wrap>
+                <Wrap className={style.wrapper}>
                   {showProject.stacksNames.map((stack) => (
                     <WrapItem
                       key={stack}
@@ -180,12 +183,30 @@ const Projects = () => {
                 </Wrap>
               </ModalBody>
 
-              <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={onClose}>
+              <ModalFooter display="flex" justifyContent="space-between">
+                <Button
+                  variant="ghost"
+                  mr={3}
+                  onClick={onClose}
+                >
                   Close
                 </Button>
-                <Button variant="ghost">GitHub</Button>
-                <Button variant="ghost">Secondary Action</Button>
+                <Link
+                  isExternal
+                  href={`${showProject.githubLink}`}
+                  className={style.modalLink}
+                >
+                  <FaGithubAlt />
+                  GitHub
+                </Link>
+                <Link
+                  isExternal
+                  href={showProject.liveLink}
+                  className={style.modalLink}
+                >
+                  <HiOutlineDesktopComputer />
+                  Live Demo
+                </Link>
               </ModalFooter>
             </ModalContent>
           </Modal>
