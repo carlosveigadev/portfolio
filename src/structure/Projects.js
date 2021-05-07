@@ -13,26 +13,29 @@ import {
   Wrap,
   WrapItem,
   Avatar,
+  Image,
   Box,
+  Center,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import cssLogo from '../assets/images/cssLogo.svg';
 import htmlLogo from '../assets/images/htmlLogo.svg';
 import gatheringsImg from '../assets/images/getherings.png';
 import rubyOnRailsLogo from '../assets/images/rubyOnRailsLogo.svg';
+import reduxLogo from '../assets/images/reduxLogo.svg';
 import palibotImg from '../assets/images/palibot.png';
 import officeWorkoutImg from '../assets/images/office_workout.png';
 import javascriptLogo from '../assets/images/javascriptLogo.svg';
 import clarasQuestImg from '../assets/images/clara_quest.jpeg';
 import weatherImg from '../assets/images/weatherapp.jpeg';
+import fmwImg from '../assets/images/find_my_wod.png';
 import style from '../assets/css/Projects.module.css';
 import Navbar from './Navbar';
 
 const Projects = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [icons, setIcons] = useState([htmlLogo, cssLogo]);
-  const [background, setBackground] = useState(`url(${gatheringsImg})`);
-
+  const [background, setBackground] = useState(gatheringsImg);
   const projects = [
     {
       id: '0',
@@ -41,7 +44,7 @@ const Projects = () => {
       githubLink: 'https://github.com/carlosveigadev/HTML-CSS-Capstone-Project.git',
       stacksNames: ['HTML', 'CSS'],
       logoLinks: [htmlLogo, cssLogo],
-      background: `url(${gatheringsImg})`,
+      background: gatheringsImg,
       text: 'In this HTML and CSS project, the main objective was to build reproduce the design of The Directory of Schools Webpage inspired by Mathew Njuguna and others on Behance, with a different theme. I chose to create a website named [gatherings] where people can meet in real life (after the COVID-19 situation) creating and sharing events across the region desired.',
       isDefault: true,
     },
@@ -52,7 +55,7 @@ const Projects = () => {
       githubLink: 'https://github.com/carlosveigadev/palibot',
       stacksNames: ['Ruby', 'Ruby On Rails', 'TailwindCSS', 'Amazon S3', 'PostgreSQL'],
       logoLinks: ['https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-icon.svg', rubyOnRailsLogo, 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg', 'https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg'],
-      background: `url(${palibotImg})`,
+      background: palibotImg,
       text: "This is a Ruby On Rails project developed at the end of the Microverse Main Technical Curriculum. It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The main objective was to reproduce the design of liFEsTlye. - Mobile version Webpage inspired by Nelson Sakwa on Behance on Behance, with a different theme. I chose to create a website named PoliBot (Filipino word for 'wanderer') where people can write articles about places they have visited on the continents of the earth.",
       isDefault: false,
     },
@@ -63,7 +66,7 @@ const Projects = () => {
       githubLink: 'https://github.com/carlosveigadev/slack-10-min-office-workout',
       stacksNames: ['Ruby', 'Slack-Ruby-Bot'],
       logoLinks: ['https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-icon.svg', 'https://www.vectorlogo.zone/logos/slack/slack-icon.svg'],
-      background: `url(${officeWorkoutImg})`,
+      background: officeWorkoutImg,
       text: 'This bot was created as part of the Capstone project, which is a solo project at the end of each of the Microverse Main Technical Curriculum sections. This slack bot was built with Ruby, to randomly provide the user with a YouTube video to a 10 minutes workout in-home office.',
       isDefault: false,
 
@@ -75,7 +78,7 @@ const Projects = () => {
       githubLink: 'https://github.com/carlosveigadev/claras-quest',
       stacksNames: ['JavaScript', 'Phaser 3'],
       logoLinks: [javascriptLogo, 'https://www.vectorlogo.zone/logos/phaserio/phaserio-icon.svg'],
-      background: `url(${clarasQuestImg})`,
+      background: clarasQuestImg,
       text: "This is a JavaScript and Phaser 3 library project developed at the end of the Microverse Main Technical Curriculum of the JavaScript section. It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The main objective was to design a game and implement it using the JavaScript Phaser 3 library.",
       isDefault: false,
     },
@@ -86,16 +89,29 @@ const Projects = () => {
       githubLink: 'https://github.com/carlosveigadev/weather-by-gifs',
       stacksNames: ['JavaScript', 'Tailwind CSS'],
       logoLinks: [javascriptLogo, 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg'],
-      background: `url(${weatherImg})`,
+      background: weatherImg,
       text: 'In this project, I used JavaScript to learn and practice fetching data from APIs, then I rendered a simple webpage that shows the weather of a city provided by the input of the user.',
+      isDefault: false,
+    },
+    {
+      id: '5',
+      title: 'Find My Wod',
+      liveLink: 'https://xenodochial-shockley-55c19b.netlify.app/',
+      githubLink: 'https://github.com/carlosveigadev/find-my-wod-frontend',
+      stacksNames: ['React&Redux', 'Chakra', 'JWT', 'Ruby on Rails'],
+      logoLinks: ['https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg', reduxLogo, rubyOnRailsLogo],
+      background: fmwImg,
+      text: 'In this project, I used Ruby on Rails for the back end and applied what I have learned with React and Redux to render a simple webpage that shows WODs and the user can favourite them.',
       isDefault: false,
     },
   ];
 
+  const [showProject, setShowProject] = useState(projects[0]);
   const [activeButtonId, setActiveButtonId] = useState('0');
 
   const handleClick = (e) => {
     const index = e.target.id;
+    setShowProject(projects[index]);
     setActiveButtonId(index);
     setIcons(projects[index].logoLinks);
     setBackground(projects[index].background);
@@ -110,7 +126,7 @@ const Projects = () => {
       </Wrap>
       <Box
         transition="1s"
-        backgroundImage={background}
+        backgroundImage={`url(${background})`}
         className={style.backgroundImg}
         w="100%"
         h="450px"
@@ -141,16 +157,34 @@ const Projects = () => {
           <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
             <ModalContent>
-              <ModalHeader>Modal Title</ModalHeader>
+              <ModalHeader>{showProject.title}</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
-                <Text>This is a text</Text>
+                <Image src={background} />
+                <Text
+                  my="1em"
+                  textAlign="justify"
+                >
+                  {showProject.text}
+
+                </Text>
+                <Wrap>
+                  {showProject.stacksNames.map((stack) => (
+                    <WrapItem
+                      key={stack}
+                      className={style.stackNames}
+                    >
+                      <Center>{stack}</Center>
+                    </WrapItem>
+                  ))}
+                </Wrap>
               </ModalBody>
 
               <ModalFooter>
                 <Button colorScheme="blue" mr={3} onClick={onClose}>
                   Close
                 </Button>
+                <Button variant="ghost">GitHub</Button>
                 <Button variant="ghost">Secondary Action</Button>
               </ModalFooter>
             </ModalContent>
@@ -165,7 +199,7 @@ const Projects = () => {
 const Icons = ({ icons }) => (
   icons.map((element) => (
     <WrapItem key={element}>
-      <Avatar bg="transparent" src={element} />
+      <Avatar bg="#77A6F7" p="3px" className={style.blur} src={element} boxShadow="lg" />
     </WrapItem>
   ))
 );

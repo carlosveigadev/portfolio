@@ -1,3 +1,11 @@
+@media (min-width: 930px) {
+  body .backgroundImg {
+    background-position: right;
+    background-size: 65em 29em;
+    background-repeat: no-repeat;
+  }
+}
+
 .txtOverflow {
   width: 60px;
   overflow: hidden;
@@ -12,9 +20,10 @@
 }
 
 .button {
+  font-size: 1.35em;
   padding: 0.5em 0.5em;
   width: 75px;
-  margin: 0.25em 0;
+  margin: 0.15em 0;
   transition: 0.5s;
   background-color: #77A6F7;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -23,16 +32,18 @@
 }
 
 .button:hover {
+  font-size: 1.35em;
   background-color: #00887A;
   color: white;
   width: fit-content;
 }
 
 .is_active {
+  font-size: 1.35em;
   background-color: #00887A;
   width: fit-content;
   padding: 0.5em 0.5em;
-  margin: 0.25em 0;
+  margin: 0.15em 0;
   transition: 0.5s;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-top-right-radius: 25px;
@@ -47,12 +58,13 @@
 }
 
 .checkProjectButton {
+  font-size: 1.35em;
   position: absolute;
   padding: 0.5em;
   display: inline-flex;
   place-self: flex-end;
   right: 0;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
   border-bottom-right-radius: 0;
@@ -76,21 +88,12 @@ body {
 }
 
 .blur {
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
 }
 
-.display-enter, .display-appear {
-  top: var(--menu-starting-top);
-  width: var(--toggler-width);
-  max-height: var(--toggler-height);
-  color: var(--fade-from-color);
-  background-color: var(--toggler-bg-color);
-}
-.display-enter-active, .display-appear-active {
-  top: var(--menu-ending-top);
-  width: var(--menu-width);
-  max-height: var(--menu-max-height);
-  color: var(--fade-to-color);
-  background-color: var(--menu-bg-color);
-  transition: all var(--timeout);
+.stackNames {
+  background-color: #77A6F7;
+  padding: 0.5em;
+  border-radius: 10px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
