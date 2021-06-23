@@ -122,19 +122,23 @@ const Projects = () => {
 
   return (
     <>
-      <Wrap m="1.5em">
+      <Wrap
+        m="1.5em"
+        display="flex"
+        justifyContent="flex-end"
+      >
         <Icons
           icons={icons}
         />
       </Wrap>
       <Box
-        transition="1s"
+        transition="1.5s"
         backgroundImage={`url(${background})`}
         className={style.backgroundImg}
         w="100%"
-        h="450px"
+        h="400px"
       >
-        <Flex className={style.blur} h="450px">
+        <Flex h="450px">
           <Flex flexDirection="column">
             {projects.map((element) => (
               <button

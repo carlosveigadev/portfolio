@@ -9,7 +9,7 @@
   }
 
   body .about p {
-    margin: 2em;
+    margin: 1.25em;
   }
 
   body .skillbox {
@@ -19,7 +19,7 @@
 
   body .skillbox > div {
     width: 300px;
-    height: 325px;
+    height: 320px;
     margin: 0 auto;
   }
 
@@ -85,7 +85,7 @@ body {
 }
 
 .skillBoxTxt {
-  font-size: 1.25em;
+  font-size: 1.2em;
   font-weight: bold;
   margin-top: 1em;
   color: #77A6F7;

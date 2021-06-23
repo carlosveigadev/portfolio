@@ -20,7 +20,7 @@ const Home = () => (
       </Text>
       <Center className={style.icons}>
         <Link
-          href="https://www.linkedin.com/in/carlosveigadev/"
+          href="https://github.com/carlosveigadev"
           target="_blank"
           rel="noopener noreferrer"
         >
