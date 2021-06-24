@@ -34,6 +34,7 @@ import weatherImg from '../assets/images/weatherapp.jpeg';
 import fmwImg from '../assets/images/find_my_wod.png';
 import style from '../assets/css/Projects.module.css';
 import Navbar from './Navbar';
+import chatMessage from '../assets/images/chat-message.png';
 
 const Projects = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -105,6 +106,17 @@ const Projects = () => {
       logoLinks: ['https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg', reduxLogo, rubyOnRailsLogo],
       background: fmwImg,
       text: 'In this project, I used Ruby on Rails for the back end and applied what I have learned with React and Redux to render a simple webpage that shows WODs and the user can favourite them.',
+      isDefault: false,
+    },
+    {
+      id: '6',
+      title: 'Chat Message',
+      liveLink: '',
+      githubLink: 'https://github.com/carlosveigadev/chat-message',
+      stacksNames: ['TypeScript', 'Express', 'Node', 'SQLite3', 'Socket.io'],
+      logoLinks: ['https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg', 'https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg', 'https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg', 'https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg', 'https://www.vectorlogo.zone/logos/socketio/socketio-icon.svg'],
+      background: chatMessage,
+      text: 'This project was done in the NWL-5 event, where I could improve my skills using TypeScript, Node and Websocket. Here is developed a chat system where an user sends a message and than a admin or helper can chat with the user to help him with his issue.',
       isDefault: false,
     },
   ];
@@ -203,6 +215,8 @@ const Projects = () => {
                   <FaGithubAlt />
                   GitHub
                 </Link>
+                {showProject.liveLink.trim() !== ''
+                && (
                 <Link
                   isExternal
                   href={showProject.liveLink}
@@ -211,6 +225,7 @@ const Projects = () => {
                   <HiOutlineDesktopComputer />
                   Live Demo
                 </Link>
+                )}
               </ModalFooter>
             </ModalContent>
           </Modal>
