@@ -27,7 +27,7 @@ import gatheringsImg from '../assets/images/getherings.png';
 import rubyOnRailsLogo from '../assets/images/rubyOnRailsLogo.svg';
 import reduxLogo from '../assets/images/reduxLogo.svg';
 import palibotImg from '../assets/images/palibot.png';
-import officeWorkoutImg from '../assets/images/office_workout.png';
+import letmeaskImg from '../assets/images/letmeask.png';
 import javascriptLogo from '../assets/images/javascriptLogo.svg';
 import clarasQuestImg from '../assets/images/clara_quest.jpeg';
 import weatherImg from '../assets/images/weatherapp.jpeg';
@@ -65,15 +65,14 @@ const Projects = () => {
     },
     {
       id: '2',
-      title: '10 Minutes Office Workout',
-      liveLink: '',
-      githubLink: 'https://github.com/carlosveigadev/slack-10-min-office-workout',
-      stacksNames: ['Ruby', 'Slack-Ruby-Bot'],
-      logoLinks: ['https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-icon.svg', 'https://www.vectorlogo.zone/logos/slack/slack-icon.svg'],
-      background: officeWorkoutImg,
-      text: 'This bot was created as part of the Capstone project, which is a solo project at the end of each of the Microverse Main Technical Curriculum sections. This slack bot was built with Ruby, to randomly provide the user with a YouTube video to a 10 minutes workout in-home office.',
+      title: 'Let Me Ask',
+      liveLink: 'https://letmeask-6d92e.web.app/',
+      githubLink: 'https://github.com/carlosveigadev/letmeask',
+      stacksNames: ['React', 'Firebase'],
+      logoLinks: ['https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg', 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg'],
+      background: letmeaskImg,
+      text: "This is a website for streamers to create rooms where you are able to answer your audience's questions in real-time.",
       isDefault: false,
-
     },
     {
       id: '3',
