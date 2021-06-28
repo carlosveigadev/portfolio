@@ -16,7 +16,7 @@ const Navbar = (props) => {
 
   return (
     <Flex>
-      <NavbarContainer className={style.navContainer} {...props}>
+      <NavbarContainer className={style.navContainer} {...props} zIndex="overlay">
         <MenuToggle toggle={toggle} isOpen={isOpen} />
         <MenuLinks isOpen={isOpen} />
       </NavbarContainer>

@@ -116,7 +116,7 @@ const Projects = () => {
       stacksNames: ['TypeScript', 'Express', 'Node', 'SQLite3', 'Socket.io'],
       logoLinks: ['https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg', 'https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg', 'https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg', 'https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg', 'https://www.vectorlogo.zone/logos/socketio/socketio-icon.svg'],
       background: chatMessage,
-      text: 'This project was done in the NWL-5 event, where I could improve my skills using TypeScript, Node and Websocket. Here is developed a chat system where an user sends a message and than a admin or helper can chat with the user to help him with his issue.',
+      text: 'This project was done in the NWL-5 event, where I could improve my skills using TypeScript, Node and Websocket. Here is developed a chat system where a user sends a message and then an admin or helper can chat with the user to help him with his issue.',
       isDefault: false,
     },
   ];
@@ -143,15 +143,9 @@ const Projects = () => {
           icons={icons}
         />
       </Wrap>
-      <Box
-        transition="1.5s"
-        backgroundImage={`url(${background})`}
-        className={style.backgroundImg}
-        w="100%"
-        h="400px"
-      >
+      <Box>
         <Flex h="450px">
-          <Flex flexDirection="column">
+          <Flex flexDirection="column" zIndex="dropdown">
             {projects.map((element) => (
               <button
                 id={element.id}
@@ -165,12 +159,23 @@ const Projects = () => {
             ))}
           </Flex>
 
+          <Image
+            shadow="2xl"
+            borderRadius="8px"
+            position="absolute"
+            right={{ sm: '0', md: '5em' }}
+            height="100%"
+            maxHeight="26em"
+            src={background}
+            alt="project background"
+          />
+
           <button
             type="button"
             className={style.checkProjectButton}
             onClick={onOpen}
           >
-            Check Project
+            More Information
           </button>
 
           <Modal isOpen={isOpen} onClose={onClose}>
