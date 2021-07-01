@@ -16,7 +16,9 @@ const Home = () => (
         I can help you build a product, feature, or website. Look through some
         of my work and experience!
         If you like what you see and have a project you need coding,
-        don&apos;t hesitate to contact me.
+        don&apos;t hesitate to
+        {' '}
+        <Link color="rgba(65, 0, 250, 0.69)" href="mailto:carlosveigadev@gmail.com">contact me.</Link>
       </Text>
       <Center className={style.icons}>
         <Link
