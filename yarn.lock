@@ -10032,6 +10032,11 @@ react-focus-lock@2.5.0:
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
 
+react-hide-on-scroll@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-hide-on-scroll/-/react-hide-on-scroll-1.1.4.tgz#62cc8c77ed175653996829ccb7ea2c2078fb157f"
+  integrity sha512-wN2Ubobr9s3DNp8ChWRZYlFhdb+vI1XmU01ssoe9lNV2F7rB8bjB10vfgjfOU2RTI+h74ncPZXcXFJivgA/UXA==
+
 react-icons@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"

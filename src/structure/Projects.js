@@ -14,6 +14,7 @@ import {
 import { FaGithubAlt } from 'react-icons/fa';
 import { HiOutlineDesktopComputer } from 'react-icons/hi';
 // import { useState } from 'react';
+import { HideScroll } from 'react-hide-on-scroll';
 import cssLogo from '../assets/images/cssLogo.svg';
 import htmlLogo from '../assets/images/htmlLogo.svg';
 import gatheringsImg from '../assets/images/getherings.png';
@@ -52,7 +53,7 @@ const Projects = () => {
       stacksNames: ['Ruby', 'Ruby On Rails', 'TailwindCSS', 'Amazon S3', 'PostgreSQL'],
       logoLinks: ['https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-icon.svg', rubyOnRailsLogo, 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg', 'https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg', 'https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg'],
       background: palibotImg,
-      text: "This is a Ruby On Rails project developed at the end of the Microverse Main Technical Curriculum. It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The main objective was to reproduce the design of liFEsTlye. - Mobile version Webpage inspired by Nelson Sakwa on Behance on Behance, with a different theme. I chose to create a website named PoliBot (Filipino word for 'wanderer') where people can write articles about places they have visited on the continents of the earth.",
+      text: "This is a Ruby On Rails project developed at the end of the Microverse Main Technical Curriculum. Built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The main objective was to reproduce the design of liFEsTlye - Webpage inspired by Nelson Sakwa on Behance on Behance, with a different theme. I chose to create a website named PoliBot (Filipino word for 'wanderer') where people can write articles about places they have visited on the continents of the earth.",
       isDefault: false,
     },
     {
@@ -114,7 +115,7 @@ const Projects = () => {
 
   return (
     <>
-      <Box>
+      <Box mx="2em">
         <Grid
           className={style.grid}
           p="2em"
@@ -122,8 +123,12 @@ const Projects = () => {
           templateColumns="repeat(1, 1fr)"
           gap={4}
         >
-          {projects.map((element) => (
-            <Flex key={element.id}>
+          {projects.map((element) => (parseFloat(element.id) % 2 === 0 ? (
+            <Flex
+              key={element.id}
+              mb={element.id === '6' && '2em'}
+
+            >
               <Center key={`element ${element.id}`}>
                 <Image
                   borderRadius="8px"
@@ -133,7 +138,7 @@ const Projects = () => {
                   alt={`${element.title} image`}
                 />
               </Center>
-              <Center flexDirection="column" justifyContent="space-around">
+              <Center flexDirection="column" justifyContent="space-around" my="1em">
                 <Heading size="lg">{element.title}</Heading>
                 <Text
                   fontSize="1em"
@@ -188,12 +193,80 @@ const Projects = () => {
               </Center>
 
             </Flex>
+          ) : (
+            <Flex key={element.id}>
+              <Center flexDirection="column" justifyContent="space-around" my="1em">
+                <Heading size="lg">{element.title}</Heading>
+                <Text
+                  fontSize="1em"
+                  px="2em"
+                  textAlign="justify"
+                >
+                  {element.text}
 
-          ))}
+                </Text>
+                <Box>
+                  <Wrap
+                    className={style.stackNamesJustify}
+                  >
+                    {element.stacksNames.map((stack, index) => (
+                      <WrapItem
+                        key={stack}
+                        className={style.stackNames}
+                      >
+                        <Center pr="1em">
+                          <Avatar mr="1em" size="xs" background="transparent" src={element.logoLinks[index]} />
+                          {stack}
+                        </Center>
+                      </WrapItem>
+                    ))}
+                  </Wrap>
+                  <Center>
+                    <Link
+                      _hover={{ textDecoration: 'none' }}
+                      isExternal
+                      href={`${element.githubLink}`}
+                      className={style.externalLinks}
+                      alignItems="center"
+                    >
+                      <FaGithubAlt px="1em" />
+                      GitHub
+                    </Link>
+                    {element.liveLink.trim() !== ''
+                && (
+                <Link
+                  alignItems="center"
+                  _hover={{ textDecoration: 'none' }}
+                  isExternal
+                  href={element.liveLink}
+                  className={style.externalLinks}
+                >
+                  <HiOutlineDesktopComputer />
+                  Live Demo
+                </Link>
+                )}
+                  </Center>
+                </Box>
+              </Center>
+              <Center
+                key={`element ${element.id}`}
+              >
+                <Image
+                  borderRadius="8px"
+                  m="0.5em"
+                  minWidth="500px"
+                  src={element.background}
+                  alt={`${element.title} image`}
+                />
+              </Center>
+            </Flex>
+          )))}
 
         </Grid>
       </Box>
-      <Navbar />
+      <HideScroll variant="down" showOnPageInit>
+        <Navbar />
+      </HideScroll>
     </>
   );
 };
