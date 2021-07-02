@@ -17,6 +17,8 @@ import cssLogo from '../assets/images/cssLogo.svg';
 import htmlLogo from '../assets/images/htmlLogo.svg';
 import gatheringsImg from '../assets/images/getherings.png';
 import rubyOnRailsLogo from '../assets/images/rubyOnRailsLogo.svg';
+import jwtLogo from '../assets/images/jwt_logo.svg';
+import chakrauiLogo from '../assets/images/chakra-ui_logo.png';
 import reduxLogo from '../assets/images/reduxLogo.svg';
 import palibotImg from '../assets/images/palibot.png';
 import letmeaskImg from '../assets/images/letmeask.png';
@@ -50,7 +52,7 @@ const Projects = () => {
       liveLink: 'https://polibot-web.herokuapp.com/',
       githubLink: 'https://github.com/carlosveigadev/palibot',
       stacksNames: ['Ruby', 'Ruby On Rails', 'TailwindCSS', 'Amazon S3', 'PostgreSQL'],
-      logoLinks: ['https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-icon.svg', rubyOnRailsLogo, 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg', 'https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg'],
+      logoLinks: ['https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-icon.svg', rubyOnRailsLogo, 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg', 'https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg', 'https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg'],
       background: palibotImg,
       text: "This is a Ruby On Rails project developed at the end of the Microverse Main Technical Curriculum. It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The main objective was to reproduce the design of liFEsTlye. - Mobile version Webpage inspired by Nelson Sakwa on Behance on Behance, with a different theme. I chose to create a website named PoliBot (Filipino word for 'wanderer') where people can write articles about places they have visited on the continents of the earth.",
       isDefault: false,
@@ -93,8 +95,8 @@ const Projects = () => {
       title: 'Find My Wod',
       liveLink: 'https://xenodochial-shockley-55c19b.netlify.app/',
       githubLink: 'https://github.com/carlosveigadev/find-my-wod-frontend',
-      stacksNames: ['React&Redux', 'Chakra', 'JWT', 'Ruby on Rails'],
-      logoLinks: ['https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg', reduxLogo, rubyOnRailsLogo],
+      stacksNames: ['React', 'React Redux', 'Chakra', 'JWT', 'Ruby on Rails'],
+      logoLinks: ['https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg', reduxLogo, chakrauiLogo, jwtLogo, rubyOnRailsLogo],
       background: fmwImg,
       text: 'In this project, I used Ruby on Rails for the back end and applied what I have learned with React and Redux to render a simple webpage that shows WODs and the user can favourite them.',
       isDefault: false,
@@ -111,17 +113,6 @@ const Projects = () => {
       isDefault: false,
     },
   ];
-
-  // const [showProject, setShowProject] = useState(projects[0]);
-  // const [activeButtonId, setActiveButtonId] = useState('0');
-
-  // const handleClick = (e) => {
-  //   const index = e.target.id;
-  //   setShowProject(projects[index]);
-  //   setActiveButtonId(index);
-  //   setIcons(projects[index].logoLinks);
-  //   setBackground(projects[index].background);
-  // };
 
   return (
     <>
@@ -144,42 +135,44 @@ const Projects = () => {
                   alt={`${element.title} image`}
                 />
               </Center>
-              <Center flexDirection="column">
+              <Center flexDirection="column" justifyContent="space-around">
                 <Text
-                  px="1em"
+                  fontSize="1em"
+                  px="2em"
                   textAlign="justify"
                 >
                   {element.text}
 
                 </Text>
-                <Wrap
-                  className={style.stackNamesJustify}
-                >
-                  {element.stacksNames.map((stack, index) => (
-                    <WrapItem
-                      key={stack}
-                      className={style.stackNames}
-                    >
-                      <Center pr="1em">
-                        <Avatar mr="1em" size="xs" background="transparent" src={element.logoLinks[index]} />
-                        {stack}
-                      </Center>
-                    </WrapItem>
-                  ))}
-                </Wrap>
-
-                <Center>
-                  <Link
-                    _hover={{ textDecoration: 'none' }}
-                    isExternal
-                    href={`${element.githubLink}`}
-                    className={style.externalLinks}
-                    alignItems="center"
+                <Box>
+                  <Wrap
+                    className={style.stackNamesJustify}
                   >
-                    <FaGithubAlt px="1em" />
-                    GitHub
-                  </Link>
-                  {element.liveLink.trim() !== ''
+                    {element.stacksNames.map((stack, index) => (
+                      <WrapItem
+                        key={stack}
+                        className={style.stackNames}
+                      >
+                        <Center pr="1em">
+                          <Avatar mr="1em" size="xs" background="transparent" src={element.logoLinks[index]} />
+                          {stack}
+                        </Center>
+                      </WrapItem>
+                    ))}
+                  </Wrap>
+
+                  <Center>
+                    <Link
+                      _hover={{ textDecoration: 'none' }}
+                      isExternal
+                      href={`${element.githubLink}`}
+                      className={style.externalLinks}
+                      alignItems="center"
+                    >
+                      <FaGithubAlt px="1em" />
+                      GitHub
+                    </Link>
+                    {element.liveLink.trim() !== ''
                 && (
                 <Link
                   alignItems="center"
@@ -192,114 +185,19 @@ const Projects = () => {
                   Live Demo
                 </Link>
                 )}
-                </Center>
+                  </Center>
+                </Box>
               </Center>
+
             </Flex>
+
           ))}
+
         </Grid>
-        {/* <Flex h="450px">
-          <Flex flexDirection="column" zIndex="dropdown">
-            {projects.map((element) => (
-              <button
-                id={element.id}
-                className={element.id === activeButtonId ? style.is_active : style.button}
-                type="button"
-                key={element.id}
-                onClick={handleClick}
-              >
-                <span id={element.id} className={style.txtOverflow}>{element.title}</span>
-              </button>
-            ))}
-          </Flex>
-
-          <Image
-            shadow="2xl"
-            borderRadius="8px"
-            position="absolute"
-            right={{ sm: '0', md: '5em' }}
-            height="100%"
-            maxHeight="26em"
-            src={background}
-            alt="project background"
-          />
-
-          <button
-            type="button"
-            className={style.checkProjectButton}
-            onClick={onOpen}
-          >
-            More Information
-          </button>
-
-          <Modal isOpen={isOpen} onClose={onClose}>
-            <ModalOverlay />
-            <ModalContent>
-              <ModalHeader>{showProject.title}</ModalHeader>
-              <ModalCloseButton />
-              <ModalBody>
-                <Image src={background} />
-                <Text
-                  my="1em"
-                  textAlign="justify"
-                >
-                  {showProject.text}
-
-                </Text>
-                <Wrap className={style.wrapper}>
-                  {showProject.stacksNames.map((stack) => (
-                    <WrapItem
-                      key={stack}
-                      className={style.stackNames}
-                    >
-                      <Center>{stack}</Center>
-                    </WrapItem>
-                  ))}
-                </Wrap>
-              </ModalBody>
-
-              <ModalFooter display="flex" justifyContent="space-between">
-                <Button
-                  variant="ghost"
-                  mr={3}
-                  onClick={onClose}
-                >
-                  Close
-                </Button>
-                <Link
-                  isExternal
-                  href={`${showProject.githubLink}`}
-                  className={style.modalLink}
-                >
-                  <FaGithubAlt />
-                  GitHub
-                </Link>
-                {showProject.liveLink.trim() !== ''
-                && (
-                <Link
-                  isExternal
-                  href={showProject.liveLink}
-                  className={style.modalLink}
-                >
-                  <HiOutlineDesktopComputer />
-                  Live Demo
-                </Link>
-                )}
-              </ModalFooter>
-            </ModalContent>
-          </Modal>
-        </Flex> */}
       </Box>
       <Navbar />
     </>
   );
 };
-
-// const Icons = ({ icons }) => (
-//   icons.map((element) => (
-//     <WrapItem key={element}>
-//       <Avatar bg="#77A6F7" p="3px" className={style.blur} src={element} boxShadow="lg" />
-//     </WrapItem>
-//   ))
-// );
 
 export default Projects;
