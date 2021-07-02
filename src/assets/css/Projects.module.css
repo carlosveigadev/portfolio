@@ -1,57 +1,6 @@
 @media (min-width: 930px) {
 }
 
-.txtOverflow {
-  width: 90px;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  text-overflow: ellipsis;
-}
-
-.txtOverflow:hover {
-  width: fit-content;
-  padding: 0 0.5em;
-}
-
-.button {
-  font-size: 1.35em;
-  padding: 0.5em 0.5em;
-  width: 120px;
-  margin: 0.15em 0;
-  transition: 0.5s;
-  background-color: #77A6F7;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-}
-
-.button:hover {
-  font-size: 1.35em;
-  background-color: #00887A;
-  color: white;
-  width: fit-content;
-}
-
-.is_active {
-  font-size: 1.35em;
-  background-color: #00887A;
-  width: fit-content;
-  padding: 0.5em 0.5em;
-  margin: 0.15em 0;
-  transition: 0.5s;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-}
-
-.is_active > span {
-  background-color: #00887A;
-  color: white;
-  width: fit-content;
-  padding: 0 0.5em;
-}
-
 .checkProjectButton {
   font-size: 1.35em;
   position: absolute;
@@ -74,14 +23,6 @@
   color: #2c2c2c;
 }
 
-body {
-  overflow-y: hidden;
-}
-
-#backgroundImg {
-  border: 1px solid purple;
-}
-
 .stackNames {
   background-color: #00887A;
   padding: 0.5em;
@@ -90,27 +31,34 @@ body {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.wrapper {
-  display: flex;
+.stackNamesJustify ul {
+  margin: 1em;
   justify-content: center;
 }
 
-.modalLink {
+.externalLinks {
+  padding: 0.5em;
+  display: inline-flex;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  display: flex;
-  padding: 0.5em 1em;
-  background-color: #77A6F7;
   color: #2c2c2c;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: 0.5s;
+  background-color: #77A6F7;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
 }
 
-.modalLink > svg {
-  align-self: center;
-  margin-right: 10px;
+.externalLinks > * {
+  margin-right:  0.5em;
 }
 
-.modalLink:hover{
+.externalLinks:hover {
   background-color: #00887A;
-  color: white;
+  color: #FFFFFF;
+}
+
+.grid > div {
+  filter: drop-shadow(0px 4px 4px rgba(102, 30, 255, 0.25));
+  background: rgba(211, 227, 252, 0.7);
+  border-radius:  8px;
 }

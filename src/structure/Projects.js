@@ -1,26 +1,18 @@
 import {
-  Button,
   Flex,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
   Text,
+  Image,
+  Grid,
+  Center,
+  Link,
   Wrap,
   WrapItem,
   Avatar,
-  Image,
   Box,
-  Center,
-  Link,
 } from '@chakra-ui/react';
 import { FaGithubAlt } from 'react-icons/fa';
 import { HiOutlineDesktopComputer } from 'react-icons/hi';
-import { useState } from 'react';
+// import { useState } from 'react';
 import cssLogo from '../assets/images/cssLogo.svg';
 import htmlLogo from '../assets/images/htmlLogo.svg';
 import gatheringsImg from '../assets/images/getherings.png';
@@ -32,14 +24,14 @@ import javascriptLogo from '../assets/images/javascriptLogo.svg';
 import clarasQuestImg from '../assets/images/clara_quest.jpeg';
 import weatherImg from '../assets/images/weatherapp.jpeg';
 import fmwImg from '../assets/images/find_my_wod.png';
-import style from '../assets/css/Projects.module.css';
-import Navbar from './Navbar';
 import chatMessage from '../assets/images/chat-message.png';
+import Navbar from './Navbar';
+import style from '../assets/css/Projects.module.css';
 
 const Projects = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [icons, setIcons] = useState([htmlLogo, cssLogo]);
-  const [background, setBackground] = useState(gatheringsImg);
+// const { isOpen, onOpen, onClose } = useDisclosure();
+// const [icons, setIcons] = useState([htmlLogo, cssLogo]);
+// const [background, setBackground] = useState(gatheringsImg);
   const projects = [
     {
       id: '0',
@@ -120,30 +112,92 @@ const Projects = () => {
     },
   ];
 
-  const [showProject, setShowProject] = useState(projects[0]);
-  const [activeButtonId, setActiveButtonId] = useState('0');
+  // const [showProject, setShowProject] = useState(projects[0]);
+  // const [activeButtonId, setActiveButtonId] = useState('0');
 
-  const handleClick = (e) => {
-    const index = e.target.id;
-    setShowProject(projects[index]);
-    setActiveButtonId(index);
-    setIcons(projects[index].logoLinks);
-    setBackground(projects[index].background);
-  };
+  // const handleClick = (e) => {
+  //   const index = e.target.id;
+  //   setShowProject(projects[index]);
+  //   setActiveButtonId(index);
+  //   setIcons(projects[index].logoLinks);
+  //   setBackground(projects[index].background);
+  // };
 
   return (
     <>
-      <Wrap
-        m="1.5em"
-        display="flex"
-        justifyContent="flex-end"
-      >
-        <Icons
-          icons={icons}
-        />
-      </Wrap>
       <Box>
-        <Flex h="450px">
+        <Grid
+          className={style.grid}
+          p="2em"
+          h="200px"
+          templateColumns="repeat(1, 1fr)"
+          gap={4}
+        >
+          {projects.map((element) => (
+            <Flex key={element.id}>
+              <Center key={`element ${element.id}`}>
+                <Image
+                  borderRadius="8px"
+                  m="0.5em"
+                  minWidth="500px"
+                  src={element.background}
+                  alt={`${element.title} image`}
+                />
+              </Center>
+              <Center flexDirection="column">
+                <Text
+                  px="1em"
+                  textAlign="justify"
+                >
+                  {element.text}
+
+                </Text>
+                <Wrap
+                  className={style.stackNamesJustify}
+                >
+                  {element.stacksNames.map((stack, index) => (
+                    <WrapItem
+                      key={stack}
+                      className={style.stackNames}
+                    >
+                      <Center pr="1em">
+                        <Avatar mr="1em" size="xs" background="transparent" src={element.logoLinks[index]} />
+                        {stack}
+                      </Center>
+                    </WrapItem>
+                  ))}
+                </Wrap>
+
+                <Center>
+                  <Link
+                    _hover={{ textDecoration: 'none' }}
+                    isExternal
+                    href={`${element.githubLink}`}
+                    className={style.externalLinks}
+                    alignItems="center"
+                  >
+                    <FaGithubAlt px="1em" />
+                    GitHub
+                  </Link>
+                  {element.liveLink.trim() !== ''
+                && (
+                <Link
+                  alignItems="center"
+                  _hover={{ textDecoration: 'none' }}
+                  isExternal
+                  href={element.liveLink}
+                  className={style.externalLinks}
+                >
+                  <HiOutlineDesktopComputer />
+                  Live Demo
+                </Link>
+                )}
+                </Center>
+              </Center>
+            </Flex>
+          ))}
+        </Grid>
+        {/* <Flex h="450px">
           <Flex flexDirection="column" zIndex="dropdown">
             {projects.map((element) => (
               <button
@@ -233,19 +287,19 @@ const Projects = () => {
               </ModalFooter>
             </ModalContent>
           </Modal>
-        </Flex>
+        </Flex> */}
       </Box>
       <Navbar />
     </>
   );
 };
 
-const Icons = ({ icons }) => (
-  icons.map((element) => (
-    <WrapItem key={element}>
-      <Avatar bg="#77A6F7" p="3px" className={style.blur} src={element} boxShadow="lg" />
-    </WrapItem>
-  ))
-);
+// const Icons = ({ icons }) => (
+//   icons.map((element) => (
+//     <WrapItem key={element}>
+//       <Avatar bg="#77A6F7" p="3px" className={style.blur} src={element} boxShadow="lg" />
+//     </WrapItem>
+//   ))
+// );
 
 export default Projects;
