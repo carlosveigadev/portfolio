@@ -118,27 +118,32 @@ const Projects = () => {
       <Box mx="2em">
         <Grid
           className={style.grid}
-          p="2em"
+          p={{ base: '0em', md: '2em' }}
           h="200px"
           templateColumns="repeat(1, 1fr)"
           gap={4}
         >
           {projects.map((element) => (parseFloat(element.id) % 2 === 0 ? (
             <Flex
+              maxWidth={{ base: '80vw', md: '' }}
               key={element.id}
               mb={element.id === '6' && '2em'}
-
+              flexDirection={{ base: 'column', md: 'row' }}
             >
               <Center key={`element ${element.id}`}>
                 <Image
                   borderRadius="8px"
                   m="0.5em"
-                  minWidth="500px"
+                  minWidth={{ base: '300px', md: '500px' }}
                   src={element.background}
                   alt={`${element.title} image`}
                 />
               </Center>
-              <Center flexDirection="column" justifyContent="space-around" my="1em">
+              <Center
+                flexDirection="column"
+                justifyContent="space-around"
+                my="1em"
+              >
                 <Heading size="lg">{element.title}</Heading>
                 <Text
                   fontSize="1em"
@@ -194,7 +199,11 @@ const Projects = () => {
 
             </Flex>
           ) : (
-            <Flex key={element.id}>
+            <Flex
+              maxWidth={{ base: '80vw', md: '' }}
+              key={element.id}
+              flexDirection={{ base: 'column', md: 'row' }}
+            >
               <Center flexDirection="column" justifyContent="space-around" my="1em">
                 <Heading size="lg">{element.title}</Heading>
                 <Text
@@ -252,9 +261,9 @@ const Projects = () => {
                 key={`element ${element.id}`}
               >
                 <Image
+                  minWidth={{ base: '300px', md: '500px' }}
                   borderRadius="8px"
                   m="0.5em"
-                  minWidth="500px"
                   src={element.background}
                   alt={`${element.title} image`}
                 />
