@@ -8,6 +8,7 @@ import {
   Wrap,
   WrapItem,
   Avatar,
+  Heading,
   Box,
 } from '@chakra-ui/react';
 import { FaGithubAlt } from 'react-icons/fa';
@@ -31,9 +32,6 @@ import Navbar from './Navbar';
 import style from '../assets/css/Projects.module.css';
 
 const Projects = () => {
-// const { isOpen, onOpen, onClose } = useDisclosure();
-// const [icons, setIcons] = useState([htmlLogo, cssLogo]);
-// const [background, setBackground] = useState(gatheringsImg);
   const projects = [
     {
       id: '0',
@@ -98,7 +96,7 @@ const Projects = () => {
       stacksNames: ['React', 'React Redux', 'Chakra', 'JWT', 'Ruby on Rails'],
       logoLinks: ['https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg', reduxLogo, chakrauiLogo, jwtLogo, rubyOnRailsLogo],
       background: fmwImg,
-      text: 'In this project, I used Ruby on Rails for the back end and applied what I have learned with React and Redux to render a simple webpage that shows WODs and the user can favourite them.',
+      text: 'In this project, I used Ruby on Rails for the backend and applied what I have learned with React and Redux to render a simple webpage that shows WODs and the user can favourite them.',
       isDefault: false,
     },
     {
@@ -136,6 +134,7 @@ const Projects = () => {
                 />
               </Center>
               <Center flexDirection="column" justifyContent="space-around">
+                <Heading size="lg">{element.title}</Heading>
                 <Text
                   fontSize="1em"
                   px="2em"
@@ -160,7 +159,6 @@ const Projects = () => {
                       </WrapItem>
                     ))}
                   </Wrap>
-
                   <Center>
                     <Link
                       _hover={{ textDecoration: 'none' }}
