@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.b39d5c94.chunk.css",
-    "main.js": "/static/js/main.4af5e899.chunk.js",
-    "main.js.map": "/static/js/main.4af5e899.chunk.js.map",
+    "main.css": "/static/css/main.97726a92.chunk.css",
+    "main.js": "/static/js/main.9bae273a.chunk.js",
+    "main.js.map": "/static/js/main.9bae273a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0605945.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0605945.js.map",
-    "static/js/2.852a9c90.chunk.js": "/static/js/2.852a9c90.chunk.js",
-    "static/js/2.852a9c90.chunk.js.map": "/static/js/2.852a9c90.chunk.js.map",
+    "static/js/2.25a2fd8e.chunk.js": "/static/js/2.25a2fd8e.chunk.js",
+    "static/js/2.25a2fd8e.chunk.js.map": "/static/js/2.25a2fd8e.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.b39d5c94.chunk.css.map": "/static/css/main.b39d5c94.chunk.css.map",
-    "static/js/2.852a9c90.chunk.js.LICENSE.txt": "/static/js/2.852a9c90.chunk.js.LICENSE.txt",
+    "static/css/main.97726a92.chunk.css.map": "/static/css/main.97726a92.chunk.css.map",
+    "static/js/2.25a2fd8e.chunk.js.LICENSE.txt": "/static/js/2.25a2fd8e.chunk.js.LICENSE.txt",
     "static/media/background.7f03b2da.jpg": "/static/media/background.7f03b2da.jpg",
+    "static/media/chakra-ui_logo.d5cbd02c.png": "/static/media/chakra-ui_logo.d5cbd02c.png",
     "static/media/chat-message.6189e5ba.png": "/static/media/chat-message.6189e5ba.png",
     "static/media/clara_quest.dd0e29fd.jpeg": "/static/media/clara_quest.dd0e29fd.jpeg",
     "static/media/computerLogo.eb57740e.svg": "/static/media/computerLogo.eb57740e.svg",
@@ -20,6 +21,7 @@
     "static/media/getherings.db8a8a3a.png": "/static/media/getherings.db8a8a3a.png",
     "static/media/htmlLogo.5b14a939.svg": "/static/media/htmlLogo.5b14a939.svg",
     "static/media/javascriptLogo.1c7a923e.svg": "/static/media/javascriptLogo.1c7a923e.svg",
+    "static/media/jwt_logo.92d47c14.svg": "/static/media/jwt_logo.92d47c14.svg",
     "static/media/letmeask.9cd102da.png": "/static/media/letmeask.9cd102da.png",
     "static/media/palibot.2ef0da0b.png": "/static/media/palibot.2ef0da0b.png",
     "static/media/reduxLogo.05ecc79a.svg": "/static/media/reduxLogo.05ecc79a.svg",
@@ -29,8 +31,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d0605945.js",
-    "static/js/2.852a9c90.chunk.js",
-    "static/css/main.b39d5c94.chunk.css",
-    "static/js/main.4af5e899.chunk.js"
+    "static/js/2.25a2fd8e.chunk.js",
+    "static/css/main.97726a92.chunk.css",
+    "static/js/main.9bae273a.chunk.js"
   ]
 }
