@@ -115,7 +115,7 @@ const Projects = () => {
 
   return (
     <>
-      <Box mx="2em">
+      <Center mx="2em">
         <Grid
           className={style.grid}
           p={{ base: '0em', md: '2em' }}
@@ -272,7 +272,7 @@ const Projects = () => {
           )))}
 
         </Grid>
-      </Box>
+      </Center>
       <HideScroll variant="down" showOnPageInit>
         <Navbar />
       </HideScroll>
